@@ -1,0 +1,13 @@
+{
+  "pairs": 41290,
+  "questions": 2112,
+  "by_source": {
+    "qasper": 40630,
+    "mmlongbench_doc": 660
+  },
+  "by_label": {
+    "1": 7574,
+    "0": 33716
+  },
+  "note": "mixed training only; evaluation remains source-specific"
+}

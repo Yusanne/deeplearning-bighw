@@ -1,0 +1,17 @@
+# Formal first run: QASPER-only supervision.
+# Do this before mixing MMLongBench pairs so transfer can be measured cleanly.
+run_name: qasper_only_v1
+base_model: cross-encoder/ms-marco-MiniLM-L6-v2
+train_pairs: results/raw/qasper_train_pairs.jsonl
+output_dir: models/qasper_supervised_v1
+epochs: 2
+batch_size: 32
+max_length: 512
+learning_rate: 0.00002
+balance_classes: true
+seed: 2024201433
+
+# After training, evaluate the same checkpoint with:
+#   data_splits/eval_main80.json  -> data/pages
+#   data_splits/eval_qasper40.json -> data/qasper_pages
+# and run scripts/s13_bootstrap_ci.py on both result files.

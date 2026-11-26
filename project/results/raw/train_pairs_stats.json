@@ -1,0 +1,13 @@
+{
+  "questions": 15,
+  "pairs": 660,
+  "pos": 436,
+  "neg": 224,
+  "blocked_docs": 75,
+  "skipped": {
+    "eval_or_audit_doc": 622,
+    "gold_not_located": 19,
+    "modality": 415,
+    "no_text": 11
+  }
+}

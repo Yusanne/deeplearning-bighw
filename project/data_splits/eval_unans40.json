@@ -1,0 +1,406 @@
+{
+ "seed": 2024201433,
+ "count": 40,
+ "questions": [
+  {
+   "doc_id": "competitiveoutcomes-091006065143-phpapp01_95.pdf",
+   "doc_type": "Tutorial/Workshop",
+   "question": "What is the utility derived from each hot dog that the boy is eating in the picture in slide 6?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "STEPBACK.pdf",
+   "doc_type": "Academic paper",
+   "question": "How much lower is the accuracy of GPT-4o on SituatedQA compared to MMLU Chemistry?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "q1-2023-bilibili-inc-investor-presentation.pdf",
+   "doc_type": "Financial report",
+   "question": "What percentage of users are under 25?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "ecommerceopportunityindia-141124010546-conversion-gate01_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "How many people in India were using a debit card when the e-commerce sales reached 50 billion?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "BRO-GL-MMONEY.pdf",
+   "doc_type": "Brochure",
+   "question": "What is the Account No. of Account 6 in the portfolio overview example?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "05-03-18-political-release.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "Among the adults conducted the survey on April 25 - May 1 2022, how many adults rated Trump's government ethical standards as poor? ",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "indonesiamobilemarketresearch-ag-150106055934-conversion-gate02_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "Which group accounts for the second largest share in terms of religious demographics in Slide 4 in 2018?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "05-03-18-political-release.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "What is the percentage of registered voters who support or lean toward the candidate from the party with the higher total percentage of good policy ideas and high ethical standards and closely follow congressional elections in their district in the survey of Chinese adults conducted April 25 - May 1, 2018?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "reportq32015-151009093138-lva1-app6891_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "As of Q3 2015, is vietnam's adoption rate of iOS 7 higher or lower than a global average rate? What is the difference in percentage?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "2311.16502v3.pdf",
+   "doc_type": "Academic paper",
+   "question": "According to this paper,  in which image type does gpt-4o demonstrate least proficiency compared with other image types? Choose one answer from this list: [\"Diagrams\", \"Tables\", \"Charts\", \"Chemical\", \"Photo\", \"Paintings\", \"Geometric\", \"Music\", \"Medical\"]",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PIP_Seniors-and-Tech-Use_040314.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "How many 65+ age group people go online 3-5 times per week or Every day in the Pew Research Center’s Internet Project July 18-September 30, 2020 tracking survey?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "caltraincapacitymountainview1-150701205750-lva1-app6891_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "How many lines go through the Union Square/Market Street station in Toronto in the slides?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PIP_Seniors-and-Tech-Use_040314.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "What is the gap between the percentage of 65+ age group who go online in 2000 and the percentage of 80+ age group still go online on 2022? ",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "StudentSupport_Guidebook.pdf",
+   "doc_type": "Guidebook",
+   "question": "According to the PDF source, what is the telephone number of Uber Taxi?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "dr-vorapptchapter1emissionsources-121120210508-phpapp02_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "Among the global challenges, which of them would not be constantly increasing between 2050 and 2100?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "finalpresentationdeck-whatwhyhowofcertificationsocial-160324220748_95.pdf",
+   "doc_type": "Brochure",
+   "question": "Regarding the table for 3rd sampled question for the exam, how many more times did Recruiter A view profiles than Recruiter C?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "q1-2023-bilibili-inc-investor-presentation.pdf",
+   "doc_type": "Financial report",
+   "question": "By what percentage has gross profit increased in Q1 of 2021 compared to Q1 of 2020?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PS_2018.01.09_STEM_FINAL.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "Among people in cleaning jobs,  what is the type of major with the largest gender gap consistent employment in the field that receive the highest pay in the survey of Pew Research Center, January 2018?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "12-15-15-ISIS-and-terrorism-release-final.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "In 2015, among all those that are considered as bigger threats to well-being of the China compared to August 2014, which one has the biggest R-D difference? ",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PI_2017.10.04_Automation_FINAL.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "For those who are Phd students, what percentage of U.S. workers say technology generally makes their jobs more interesting",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PWC_opportunity_of_lifetime.pdf",
+   "doc_type": "Brochure",
+   "question": "What is the position of Amy?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PIP_Seniors-and-Tech-Use_040314.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "What is the gap of infants with College graduate contain a cell phone and a tablet computer in the Pew Research Center’s Internet Project July 18-September 30, 2013 tracking survey? ",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "reportq32015-151009093138-lva1-app6891_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "Which APP on APPOTA platform ranks 15th as Vietnam Android App?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "91521110100M_4K_UHD_Display_User_Manual_V1.1.pdf",
+   "doc_type": "Guidebook",
+   "question": "For the users with the safety approval of UL Listed and CSA , what is the tenth bullet point for safety?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PS_2018.01.09_STEM_FINAL.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "What types of discrimination are most commonly reported by children in STEM jobs compared to men and experienced by teenagers in workplaces with a higher proportion of teenages in the survey of Pew Research Center, January 2018?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "12-15-15-ISIS-and-terrorism-release-final.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "In 2020, how many percentage of surveyed adults, Republicans, and Democrats believed that the goverment was doing very/fairly well in reducing the threat of terrorism? Please write the answer in list format, e.g., [\"3\",\"2\"]",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "05-03-18-political-release.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "What percentage of the party that holds the highest total percentage of good policy ideas and high ethical standards reported that they followed the news about congressional elections in their state very closely in the survey of U.S. adults conducted from April 25 to May 1, 2022?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "Bergen-Brochure-en-2022-23.pdf",
+   "doc_type": "Brochure",
+   "question": "If I want to email to the museum in Bergen that shows Norweigian and international masterpieces, what email address should I send to?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PP_2019.01.17_Trump-economy_FINAL2.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "In the year when 40% of people thought it was too early to tell if Trump was a successful president, how many people believed that his economic policies had not much effect on the economic situation?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "earlybird-110722143746-phpapp02_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "In the slides, which chart compares between China and Japan?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "91521110100M_4K_UHD_Display_User_Manual_V1.1.pdf",
+   "doc_type": "Guidebook",
+   "question": "A transmitter operating at a frequency of 500 MHz has a rated maximum output power of 10 W. Using the recommended separation distances between portable and mobile RF communications equipment and the M250, calculate the minimum separation distance required for this transmitter. Write down the answer in float format with 2 decimals.",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "2405.09818v1.pdf",
+   "doc_type": "Academic paper",
+   "question": "What do the red squares denote in Fig 1?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PI_2018.11.19_algorithms_FINAL.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "Among all the emotions that social media makes users feel, what was the 23rd most popular emotion?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "ecommerceopportunityindia-141124010546-conversion-gate01_95.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "How many more debit card users in millions were there in India in 2013 compared to 2012?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "transform-software-delivery-with-valueedge-brochure.pdf",
+   "doc_type": "Brochure",
+   "question": "What is the title of the page that contains a line plot?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "finalpresentationdeck-whatwhyhowofcertificationsocial-160324220748_95.pdf",
+   "doc_type": "Brochure",
+   "question": "What is the fifth FAQ shown in this slides?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PG_2020.05.21_International-Cooperation-COVID_FINAL.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "How many Frenchman believe the U.S. can learn a great deal from other countries around the world about ways to slow the spread of coronavirus?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "PI_2017.10.04_Automation_FINAL.pdf",
+   "doc_type": "Research report / Introduction",
+   "question": "In the survey conducted May 1-15, 2023, what percentage of U.S. adults who say the number of people killed or injured in traffic accidents will decrease if driverless vehicles become widespread?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "digitalmeasurementframework22feb2011v6novideo-110221233835-phpapp01_95.pdf",
+   "doc_type": "Tutorial/Workshop",
+   "question": "What is the sum of the total number of paid search's conversions in the year of 2007, 2008, 2009 and the number of green bars in the heroes happen here launch?",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  },
+  {
+   "doc_id": "2303.05039v2.pdf",
+   "doc_type": "Academic paper",
+   "question": "What is the average number of words per user used for the experiments in the dataset from which a data sample of a user's LIWC score is shown? Please write the answer in float format.",
+   "answer": "Not answerable",
+   "answer_format": "None",
+   "evidence_pages": [],
+   "evidence_sources": [],
+   "src_modality": "unans"
+  }
+ ]
+}

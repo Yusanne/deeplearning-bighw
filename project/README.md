@@ -1,0 +1,94 @@
+# CiteFaith 项目工程目录
+
+题目：有引用，不等于有依赖——面向长文档问答的冗余感知证据忠实性评估与重排序
+策划文档：`../选题策划和可行性分析.md`（含冻结协议 §7 与冲刺执行清单）
+
+## 运行顺序（venv python -I，脚本与数据分离）
+
+```bash
+PY=/home/iah_public/Yusanne/深度学习/.venv/bin/python
+W1=../week1/data            # samples.json / doc_list.json（week1 已下载的 16 篇 PDF 复用其 documents/）
+
+# 1 冻结划分（秒级）
+$PY -I scripts/s1_freeze_splits.py $W1/samples.json data_splits $W1/selected20.json
+
+# 2 下载全库 135 篇 PDF（week1 的 16 篇复用，其余由官方 GitHub 文档清单补齐）
+$PY -I scripts/s2_fetch_docs.py $W1/doc_list.json data/documents
+
+# 3 逐页文本抽取
+$PY -I scripts/s3_extract_all.py data/documents data/pages
+
+# 4 审计层自动筛选（验证 ≥20 门槛 + 产出复核清单）
+$PY -I scripts/s4_autofilter_audit.py data_splits/audit_pool.json data/pages results/raw
+
+# 5 MMLongBench-Doc 训练对构造（文档隔离；当前实际 pilot 为 15 题/660 对）
+$PY -I scripts/s5_build_train_pairs.py $W1/samples.json data_splits \
+      results/raw/audit_candidates.json data/pages results/raw
+
+# 6 生成答案槽（qwen-plus，train split 专用，缓存续跑）
+OPENAI_API_KEY=... OPENAI_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1 \
+$PY -I scripts/s6_gen_train_answers.py results/raw/gen_manifest.jsonl results/raw/gen_answers.jsonl
+
+# 7 零样本 reranker 基线行（本地 CPU；需 transformers；模型已冻结为 MiniLM-L6）
+$PY -I scripts/s7_zeroshot_rerank.py data_splits/eval_main80.json data/pages results/raw
+
+# 8 QASPER 官方证据版本：构造段落单位的 40 题外部验证切片
+$PY -I scripts/s11_prepare_qasper.py data/qasper_official/raw_train_dev/qasper-train-v0.3.json \
+      data/qasper_official/raw_train_dev/qasper-dev-v0.3.json \
+      data/qasper_official/raw_test/qasper-test-v0.3.json \
+      data/qasper_pages data_splits/eval_qasper40.json results/raw/qasper_stats.json
+
+# 9 在 QASPER 外部切片上跑同一套检索/重排序评测
+$PY -I scripts/s7_zeroshot_rerank.py data_splits/eval_qasper40.json data/qasper_pages results/raw/qasper_zeroshot
+# 该切片现在 strict_evidence=true，只使用官方 evidence 段落，不扩展邻段。
+$PY -I scripts/s13_bootstrap_ci.py results/raw/qasper_zeroshot/zeroshot_rerank.json \
+      results/raw/qasper_zeroshot/bootstrap_ci.json 2000
+
+# 10 构造 QASPER train 的段落 evidence 对（已实测 2,097 题 / 40,630 对）
+$PY -I scripts/s12_build_qasper_pairs.py data/qasper_official/raw_train_dev/qasper-train-v0.3.json \
+      results/raw/qasper_train_pairs.jsonl results/raw/qasper_train_pairs_stats.json
+
+# 11 QASPER train evidence 对的正式训练（ModelArts；本机只跑 pilot）
+# 当前 s10_train_reranker_pilot.py 对应 660 对 MMLongBench pilot；正式训练需在 GPU 上跑 40,630 对。
+# 首轮正式配置见 configs/modelarts_qasper_only.yaml：
+# RERANK_MODEL=cross-encoder/ms-marco-MiniLM-L6-v2 \
+#   BATCH_SIZE=32 MAX_LENGTH=512 BALANCE_CLASSES=1 \
+#   $PY -I scripts/s10_train_reranker_pilot.py \
+#   results/raw/qasper_train_pairs.jsonl models/qasper_supervised_v1 2
+
+# 12 第二轮才跑混合训练（40,630 QASPER + 660 MMLongBench）
+$PY -I scripts/s14_merge_pairs.py results/raw/mixed_train_pairs.jsonl \
+      qasper=results/raw/qasper_train_pairs.jsonl \
+      mmlongbench_doc=results/raw/train_pairs.jsonl
+# 配置：configs/modelarts_mixed.yaml；不能把两个数据源的指标合并。
+
+# 13 表格转换（评测 CSV 全部由此生成 LaTeX，禁止手敲数字）
+$PY -I scripts/s9_csv_to_latex.py results/tables/main.csv results/tables/main.tex --bold-max
+```
+
+## 目录
+
+- `scripts/` 全部实验脚本（自包含，`lib_cf.py` 为共享库）
+- `configs/frozen_protocol.yaml` 冻结常数
+- `data_splits/` 划分与审计清单（版本控制）
+- `data/` 原始文档与逐页文本（不入库，README 记录取得方式）
+- `results/raw|tables/` 原始输出与论文表格
+- `models/` reranker checkpoint 与训练日志（ModelArts 侧产出后回传）
+
+## CiteFaith-20 双人复核文件
+
+正式审计不是让一人标完全部题目，而是固定 20 个唯一候选：潘雨萱独立 7 题、张轩晨独立 8 题、双方共同复核 5 题。对应文件已经生成：
+
+- `results/raw/review_assignments.csv`：完整 20 题分工表；
+- `results/raw/review_task_pan.xlsx`：潘雨萱的复核任务（7 个独立题 + 5 个共同题）；
+- `results/raw/review_task_zhang.xlsx`：张轩晨的复核任务（8 个独立题 + 5 个共同题），证据页文本已内嵌，可直接发送；
+- `results/raw/review_task_pan.csv` / `review_task_zhang.csv`：便于程序读取的任务清单。
+
+两份 Excel 只需要填写黄色列；完成后可使用 `app/merge_simple_annotation_xlsx.py` 合并共同题并计算一致性。
+
+## 边界
+
+- API key 只走环境变量，绝不写入任何文件；
+- 运行时（审计与最终系统）答案槽一律用生成答案，金标只出现在 train split；
+- 当前 TF-IDF 是 Dense 的临时代理；正式 Dense baseline 固定使用 `sentence-transformers/all-MiniLM-L6-v2`，结果表必须明确区分代理结果和正式 Dense 结果。
+- LongDocURL 属于 MMLongBench 内的任务，且主要是页面图像，不是本项目默认的独立第二数据集；默认外部验证使用官方 QASPER 段落证据。

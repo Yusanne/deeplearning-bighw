@@ -1,0 +1,21 @@
+{
+  "questions": 19,
+  "skipped_no_text": [
+    {
+      "qid": "cfw1_019",
+      "doc_id": "catvsdogdlpycon15se-150512122612-lva1-app6891_95.pdf",
+      "reason": "no text-extractable page (likely scanned doc)"
+    }
+  ],
+  "hit5_bm25": 0.737,
+  "hit5_rrf": 0.789,
+  "gold_rank_rrf_median": 1,
+  "swap_proxy_valid_rate": 0.684,
+  "benign_ok_rate": 1.0,
+  "mean_est_tokens_per_world": {
+    "plus": 4162,
+    "del": 2989,
+    "swap": 4162,
+    "benign": 4611
+  }
+}

@@ -1,0 +1,45 @@
+# Local/system files
+.agents/
+.aws/
+.codex/
+.venv/
+**/__pycache__/
+*.pyc
+*.pyo
+*.swp
+.DS_Store
+
+# Raw datasets and downloaded documents
+project/data/documents/
+project/data/pages/
+project/data/qasper_pages/
+project/data/qasper_official/
+project/data/longdocurl/
+project/data/*.parquet
+week1/data/documents/
+week1/data/pages/
+week1/results/llm/
+
+# Model weights and tokenizers
+project/models/
+
+# Large/generated experiment streams
+project/results/raw/*.jsonl
+project/results/raw/finetuned/
+project/results/raw/gen_answers_*.jsonl
+project/results/raw/gen_manifest_*.jsonl
+project/results/raw/train_pairs.jsonl
+project/results/raw/qasper_train_pairs.jsonl
+project/results/raw/mixed_train_pairs.jsonl
+
+# Personal/filled copies of annotation workbooks
+/CiteFaith_Pilot20_简易标注表.xlsx
+/CiteFaith_Pilot20_简易标注表_张轩晨.xlsx
+/CiteFaith_Pilot20_简易标注表_已填_*.xlsx
+
+# Course handout kept locally, not project source
+/深度学习课程大作业要求v2.pdf
+
+# Temporary local output directories
+project/results/tables/
+project/results/raw/longdocurl_check/

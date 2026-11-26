@@ -1,0 +1,30 @@
+{
+  "source": "QASPER v0.3 official S3 release",
+  "splits": {
+    "train": {
+      "papers": 888,
+      "questions": 2593,
+      "answerable_questions": 2322,
+      "questions_with_mapped_evidence": 2097
+    },
+    "dev": {
+      "papers": 281,
+      "questions": 1005,
+      "answerable_questions": 945,
+      "questions_with_mapped_evidence": 851
+    },
+    "test": {
+      "papers": 416,
+      "questions": 1451,
+      "answerable_questions": 1372,
+      "questions_with_mapped_evidence": 1241
+    }
+  },
+  "external_slice": {
+    "questions": 40,
+    "documents": 40,
+    "dev": 20,
+    "test": 20,
+    "unit": "paragraph"
+  }
+}

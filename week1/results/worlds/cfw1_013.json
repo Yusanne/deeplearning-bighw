@@ -1,0 +1,167 @@
+{
+  "qid": "cfw1_013",
+  "doc_id": "c31e6580d0175ab3f9d99d1ff0bfa000.pdf",
+  "question": "TOP security concerns of computerized medical information DIAGRAM DISCUSSED ABOUT WHICH YEAR? List all of them like ['2014', '2018', '2020'].",
+  "answer": "[2005, 2006]",
+  "answer_format": "List",
+  "gold_pages_textview": [
+    12
+  ],
+  "n_corpus_pages": 16,
+  "hit5_bm25": true,
+  "hit5_rrf": true,
+  "gold_rank_rrf": 3,
+  "del_pages": [
+    11,
+    4,
+    2,
+    8
+  ],
+  "benign_pages": [
+    4,
+    2
+  ],
+  "benign_ok": true,
+  "swap_page": 12,
+  "swap": {
+    "swap_ok": false,
+    "rule": "no-substitution",
+    "replacement": "",
+    "reason": "answer tokens not substitutable on page",
+    "e_minus_has_replacement": true,
+    "e_minus_free_of_gold": true,
+    "keyword_overlap": 1,
+    "short_answer_needs_review": false,
+    "valid_proxy": false
+  },
+  "worlds": {
+    "plus": [
+      {
+        "page": 11,
+        "chars": 143,
+        "text": "Top Security Concerns of \nComputerized Medical Information \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 4,
+        "chars": 304,
+        "text": "Sad Facts \n• Medical errors account for more deaths \nthan breast cancer, AIDs and motorcycle \naccidents. \n• US has highest HC costs per capita in \nworld \n• US has worst outcomes of industrialized \nnations. (infant mortality, lifespan, etc.) \n• Healthcare is 10-15 yrs behind business in \nadoption of IT \n",
+        "modified": false
+      },
+      {
+        "page": 12,
+        "chars": 99,
+        "text": "Security Tools \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 2,
+        "chars": 232,
+        "text": "Outline  \n• What kinds of HIT systems are there? \n• What major trends are emerging? \n• What are the benefits to adoption? \n• What are the barriers to adoption? \n• What is the current state of adoption? \n• How can you learn more? \n \n",
+        "modified": false
+      },
+      {
+        "page": 8,
+        "chars": 123,
+        "text": "Top Business Issues Facing \nHealthCare \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      }
+    ],
+    "del": [
+      {
+        "page": 11,
+        "chars": 143,
+        "text": "Top Security Concerns of \nComputerized Medical Information \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 4,
+        "chars": 304,
+        "text": "Sad Facts \n• Medical errors account for more deaths \nthan breast cancer, AIDs and motorcycle \naccidents. \n• US has highest HC costs per capita in \nworld \n• US has worst outcomes of industrialized \nnations. (infant mortality, lifespan, etc.) \n• Healthcare is 10-15 yrs behind business in \nadoption of IT \n",
+        "modified": false
+      },
+      {
+        "page": 2,
+        "chars": 232,
+        "text": "Outline  \n• What kinds of HIT systems are there? \n• What major trends are emerging? \n• What are the benefits to adoption? \n• What are the barriers to adoption? \n• What is the current state of adoption? \n• How can you learn more? \n \n",
+        "modified": false
+      },
+      {
+        "page": 8,
+        "chars": 123,
+        "text": "Top Business Issues Facing \nHealthCare \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      }
+    ],
+    "swap": [
+      {
+        "page": 11,
+        "chars": 143,
+        "text": "Top Security Concerns of \nComputerized Medical Information \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 4,
+        "chars": 304,
+        "text": "Sad Facts \n• Medical errors account for more deaths \nthan breast cancer, AIDs and motorcycle \naccidents. \n• US has highest HC costs per capita in \nworld \n• US has worst outcomes of industrialized \nnations. (infant mortality, lifespan, etc.) \n• Healthcare is 10-15 yrs behind business in \nadoption of IT \n",
+        "modified": false
+      },
+      {
+        "page": 12,
+        "chars": 99,
+        "text": "Security Tools \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 2,
+        "chars": 232,
+        "text": "Outline  \n• What kinds of HIT systems are there? \n• What major trends are emerging? \n• What are the benefits to adoption? \n• What are the barriers to adoption? \n• What is the current state of adoption? \n• How can you learn more? \n \n",
+        "modified": false
+      },
+      {
+        "page": 8,
+        "chars": 123,
+        "text": "Top Business Issues Facing \nHealthCare \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      }
+    ],
+    "benign": [
+      {
+        "page": 11,
+        "chars": 143,
+        "text": "Top Security Concerns of \nComputerized Medical Information \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 4,
+        "chars": 304,
+        "text": "Sad Facts \n• Medical errors account for more deaths \nthan breast cancer, AIDs and motorcycle \naccidents. \n• US has highest HC costs per capita in \nworld \n• US has worst outcomes of industrialized \nnations. (infant mortality, lifespan, etc.) \n• Healthcare is 10-15 yrs behind business in \nadoption of IT \n",
+        "modified": false
+      },
+      {
+        "page": 12,
+        "chars": 99,
+        "text": "Security Tools \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      },
+      {
+        "page": 2,
+        "chars": 232,
+        "text": "Outline  \n• What kinds of HIT systems are there? \n• What major trends are emerging? \n• What are the benefits to adoption? \n• What are the barriers to adoption? \n• What is the current state of adoption? \n• How can you learn more? \n \n",
+        "modified": false
+      },
+      {
+        "page": 8,
+        "chars": 123,
+        "text": "Top Business Issues Facing \nHealthCare \nSource: 17th Annual HIMSS Leadership Survey Sponsored by ACS HealthCare Solutions \n",
+        "modified": false
+      }
+    ]
+  },
+  "token_est_per_world": {
+    "plus": 225,
+    "del": 200,
+    "swap": 225,
+    "benign": 225
+  }
+}

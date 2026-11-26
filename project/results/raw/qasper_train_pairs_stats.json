@@ -1,0 +1,14 @@
+{
+  "questions_seen": 2593,
+  "questions_with_pairs": 2097,
+  "pairs": 40630,
+  "positive": 7138,
+  "negative": 33492,
+  "skipped": {
+    "unanswerable": 271,
+    "no_evidence_mapping": 225,
+    "no_negatives": 0
+  },
+  "source": "QASPER v0.3 official train",
+  "unit": "paragraph"
+}

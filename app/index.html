@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CiteFaith Pilot 20 标注台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CITEFAITH · PILOT ANNOTATION</p>
+        <h1>反事实引用忠实性标注台</h1>
+        <p class="subtitle">独立判断替换证据是否真的改变了事实结论。</p>
+      </div>
+      <div class="top-actions">
+        <label class="file-button">
+          <input id="worldsInput" type="file" accept=".json,application/json" multiple webkitdirectory />
+          加载 worlds 文件夹
+        </label>
+        <label class="file-button secondary">
+          <input id="llmInput" type="file" accept=".json,application/json" multiple webkitdirectory />
+          可选：加载模型输出
+        </label>
+        <button id="exportCurrent" class="button primary">导出当前标注</button>
+        <button id="exportAll" class="button">导出全部标注</button>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="toolbar-group">
+        <span class="label">当前标注人</span>
+        <select id="annotatorSelect" class="select">
+          <option value="A">标注人 A</option>
+          <option value="B">标注人 B</option>
+        </select>
+        <span id="saveState" class="save-state">未加载数据</span>
+      </div>
+      <div class="toolbar-group progress-group">
+        <span id="progressText">0 / 0 已完成</span>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+        <button id="prevButton" class="icon-button" title="上一题 (←)">←</button>
+        <button id="nextButton" class="icon-button" title="下一题 (→)">→</button>
+      </div>
+    </section>
+
+    <main class="workspace">
+      <aside class="sidebar panel">
+        <div class="sidebar-head">
+          <div>
+            <span class="section-kicker">题目列表</span>
+            <h2>Pilot 20</h2>
+          </div>
+          <span id="loadedCount" class="count-badge">0</span>
+        </div>
+        <div id="questionList" class="question-list">
+          <div class="empty-state compact">请先加载<br />week1/results/worlds</div>
+        </div>
+      </aside>
+
+      <section id="mainPanel" class="main-column">
+        <div class="empty-state large">
+          <div class="empty-icon">⌁</div>
+          <h2>先加载 worlds 文件夹</h2>
+          <p>选择 <code>week1/results/worlds</code> 文件夹中的 JSON 文件即可开始标注。</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

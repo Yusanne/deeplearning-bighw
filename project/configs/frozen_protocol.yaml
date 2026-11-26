@@ -1,0 +1,55 @@
+# CiteFaith frozen protocol (v2026-11-26) — mirrors 选题策划和可行性分析.md §7
+# Any change after freeze must be logged with version, reason, impact.
+
+seed: 2024201433
+
+splits:
+  eval_main: 80            # answerable, Pure-text+Table, stratified answer_format x modality
+  eval_main_dev: 20        # doc-isolated from test
+  eval_main_test: 60
+  eval_unanswerable: 40    # doc-disjoint from main80 (train-pool allowed: abstention layer)
+  audit_default: 20        # CiteFaith-20 = primary analysis (2026-11-26 plan revision)
+  audit_extension: 40      # only if candidate quality + time allow; robustness analysis
+  audit_selected_actual: 29    # s4 autofilter result 2026-11-26: 20 primary + 9 extension
+  audit_shortlist_review: 5    # double-reviewed overlap; independent tasks are separate
+  cap_per_doc: 3
+
+method:
+  main: redundancy_aware_diagnostic   # offline diagnostic is the主线
+  runtime_gate: optional_extension    # NOT a hard requirement (2026-11-26 revision)
+
+retrieval:
+  topk_generation: 5
+  topk_candidates_rerank: 20
+  rrf_k0: 60
+  dense_model: sentence-transformers/all-MiniLM-L6-v2
+  dense_status: tfidf_proxy_until_formal_dense_run
+
+reranker:                   # §3.6.2 answer-slot protocol (leakage-safe)
+  base_model: cross-encoder/ms-marco-MiniLM-L6-v2   # actual feasible CPU/GPU pilot and main model
+  optional_robustness_model: BAAI/bge-reranker-base  # only if Huawei Cloud budget permits
+  hard_negatives_per_question: 8
+  page_max_chars: 4000
+  answer_slots: [gold, gen, none]      # runtime uses GEN only; gold allowed on train split only
+  train_doc_isolation: [eval_main, eval_unans, audit_set]
+
+audit_autofilter:           # §3.5.4
+  redundancy_rule: normalized answer string on any non-gold page -> redundant_support
+  min_valid_candidates: 20  # gate for keeping counterfactual claims
+  benign_pages_per_question: 2
+
+generation:
+  model: qwen-plus
+  temperature: 0
+  endpoint: dashscope-compatible
+  judge: TBD-on-dev
+  amendment_v20261126b:  # logged per freeze rule (record, reason, impact)
+    scope: training answer-slot variants ONLY (gen slot, train split)
+    change: qwen-plus free quota exhausted mid-run; remaining train questions answered with
+      qwen-plus-latest (same family), overflow to qwen-flash if needed
+    impact: gen-slot training distribution approximates runtime qwen-plus answers; gold/none
+      slots and ALL dev/test runtime answers unchanged (qwen-plus)
+
+cost_budget:
+  api_input_tokens_est: 8-10M
+  gpu: Huawei Cloud/ModelArts for QASPER-supervised training; local CPU fallback for the 660-pair pilot

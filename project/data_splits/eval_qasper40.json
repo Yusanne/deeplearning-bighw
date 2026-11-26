@@ -1,0 +1,581 @@
+{
+ "count": 40,
+ "dev": [
+  {
+   "doc_id": "qasper_1503.00841",
+   "paper_id": "1503.00841",
+   "question": "How do they define robustness of a model?",
+   "answer": "ability to accurately classify texts even when the amount of prior knowledge for different classes is unbalanced, and when the class distribution of the dataset is unbalanced",
+   "evidence_pages": [
+    18,
+    39,
+    48,
+    50
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "02428a8fec9788f6dc3a86b5d5f3aa679935678d"
+  },
+  {
+   "doc_id": "qasper_1601.02403",
+   "paper_id": "1601.02403",
+   "question": "How is the data in the new corpus come sourced?",
+   "answer": "user comments to newswire articles or to blog posts forum posts blog posts newswire articles",
+   "evidence_pages": [
+    63
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "1cb100182508cf55b3509283c0e2bbcd527d625e"
+  },
+  {
+   "doc_id": "qasper_1603.01514",
+   "paper_id": "1603.01514",
+   "question": "Do they improve on state-of-the-art semantic role induction?",
+   "answer": "yes",
+   "evidence_pages": [
+    35
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "0fc2b5bc2ead08a6fe0280fb3a47477c6df1587c"
+  },
+  {
+   "doc_id": "qasper_1603.01987",
+   "paper_id": "1603.01987",
+   "question": "Is it valid to presume a bad medical wikipedia article should not contain much domain-specific jargon?",
+   "answer": "no",
+   "evidence_pages": [
+    22
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "6a633811019e9323dc8549ad540550d27aa6d972"
+  },
+  {
+   "doc_id": "qasper_1603.08594",
+   "paper_id": "1603.08594",
+   "question": "How does enforcing agreement between parse trees work across different languages?",
+   "answer": "we can expect a dependency edge between i and i' in the English parse tree to correspond to an edge between j and j' in the Hindi parse tree dual decomposition inference algorithm tries to bring the parse trees in the two languages through its constraints",
+   "evidence_pages": [
+    17
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "87bc6f83f7f90df3c6c37659139b92657c3f7a38"
+  },
+  {
+   "doc_id": "qasper_1603.09631",
+   "paper_id": "1603.09631",
+   "question": "How was this data collected?",
+   "answer": "CrowdFlower",
+   "evidence_pages": [
+    16
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "455d4ef8611f62b1361be4f6387b222858bb5e56"
+  },
+  {
+   "doc_id": "qasper_1604.00400",
+   "paper_id": "1604.00400",
+   "question": "What is the common belief that this paper refutes? (c.f. 'contrary to the common belief, ROUGE is not much [sic] reliable'",
+   "answer": "correlations between Rouge and the Pyramid scores are weak, which challenges its effectiveness for scientific summarization",
+   "evidence_pages": [
+    6
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "184b0082e10ce191940c1d24785b631828a9f714"
+  },
+  {
+   "doc_id": "qasper_1604.00727",
+   "paper_id": "1604.00727",
+   "question": "What word level and character level model baselines are used?",
+   "answer": "None",
+   "evidence_pages": [
+    40
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "7705dd04acedaefee30d8b2c9978537afb2040dc"
+  },
+  {
+   "doc_id": "qasper_1604.03114",
+   "paper_id": "1604.03114",
+   "question": "what aspects of conversation flow do they look at?",
+   "answer": "The time devoted to self-coverage, opponent-coverage, and the number of adopted discussion points.",
+   "evidence_pages": [
+    12,
+    19
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "26327ccebc620a73ba37a95aabe968864e3392b2"
+  },
+  {
+   "doc_id": "qasper_1604.05372",
+   "paper_id": "1604.05372",
+   "question": "What evaluation metric do they use?",
+   "answer": "Accuracy",
+   "evidence_pages": [
+    31
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "aefa333b2cf0a4000cd40566149816f5b36135e7"
+  },
+  {
+   "doc_id": "qasper_1604.08504",
+   "paper_id": "1604.08504",
+   "question": "How do they detect spammers?",
+   "answer": "Extract features from the LDA model and use them in a binary classification task",
+   "evidence_pages": [
+    15,
+    16,
+    19,
+    28
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "3cd185b7adc835e1c4449eff81222f5fc15c8500"
+  },
+  {
+   "doc_id": "qasper_1605.03481",
+   "paper_id": "1605.03481",
+   "question": "What is the word-level baseline?",
+   "answer": "a simple word-level encoder The encoder is essentially the same as tweet2vec, with the input as words instead of characters.",
+   "evidence_pages": [
+    20
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "127d5ddfabec5c58832e5865cbd8ed0978c25a13"
+  },
+  {
+   "doc_id": "qasper_1605.06083",
+   "paper_id": "1605.06083",
+   "question": "What biases are found in the dataset?",
+   "answer": "Ethnic bias",
+   "evidence_pages": [
+    21,
+    23
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "26c2e1eb12143d985e4fb50543cf0d1eb4395e67"
+  },
+  {
+   "doc_id": "qasper_1605.07333",
+   "paper_id": "1605.07333",
+   "question": "How do they obtain the new context represetation?",
+   "answer": "They use two independent convolutional and max-pooling layers on (1) a combination of the left context, the left entity and the middle context; and (2) a combination of the middle context, the right entity and the right context. They concatenated the two results after pooling to get the new context representation.",
+   "evidence_pages": [
+    2,
+    9
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "0cfe0e33fbb100751fc0916001a5a19498ae8cb5"
+  },
+  {
+   "doc_id": "qasper_1606.02891",
+   "paper_id": "1606.02891",
+   "question": "what are the baseline systems?",
+   "answer": "attentional encoder-decoder networks BIBREF0",
+   "evidence_pages": [
+    1
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "642e8cf1d39faa1cd985d16750cdc6696c52db2f"
+  },
+  {
+   "doc_id": "qasper_1606.03676",
+   "paper_id": "1606.03676",
+   "question": "which languages are explored?",
+   "answer": "Bulgarian, Croatian, Czech, Danish, English, French, German, Indonesian, Italian, Norwegian, Persian, Polish, Portuguese, Slovenian, Spanish and Swedish",
+   "evidence_pages": [
+    13
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "0a5ffe4697913a57fda1fd5a188cd5ed59bdc5c7"
+  },
+  {
+   "doc_id": "qasper_1608.01084",
+   "paper_id": "1608.01084",
+   "question": "Did they only experiment with one language pair?",
+   "answer": "yes",
+   "evidence_pages": [
+    38
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "1f07e837574519f2b696f3d6fa3230af0b931e5d"
+  },
+  {
+   "doc_id": "qasper_1608.01884",
+   "paper_id": "1608.01884",
+   "question": "Do the authors conduct experiments on the tasks mentioned?",
+   "answer": "yes",
+   "evidence_pages": [
+    17
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "1dc2da5078a7e5ea82ccd1c90d81999a922bc9bf"
+  },
+  {
+   "doc_id": "qasper_1608.06757",
+   "paper_id": "1608.06757",
+   "question": "what standard dataset were used?",
+   "answer": "The GENIA Corpus CoNLL2003",
+   "evidence_pages": [
+    21,
+    22
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "8eefa116e3c3d3db751423cc4095d1c4153d3a5f"
+  },
+  {
+   "doc_id": "qasper_1608.08188",
+   "paper_id": "1608.08188",
+   "question": "What is the model architecture used?",
+   "answer": "LSTM to encode the question, VGG16 to extract visual features. The outputs of LSTM and VGG16 are multiplied element-wise and sent to a softmax layer.",
+   "evidence_pages": [
+    15
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "ecd5770cf8cb12cb34285e26ab834301c17c53e1"
+  }
+ ],
+ "test": [
+  {
+   "doc_id": "qasper_1609.00425",
+   "paper_id": "1609.00425",
+   "question": "What predictive model do they build?",
+   "answer": "logistic regression models",
+   "evidence_pages": [
+    39
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "a87a009c242d57c51fc94fe312af5e02070f898b"
+  },
+  {
+   "doc_id": "qasper_1609.00559",
+   "paper_id": "1609.00559",
+   "question": "How many humans participated?",
+   "answer": "16",
+   "evidence_pages": [
+    38,
+    39
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "4dcf67b5e7bd1422e7e70c657f6eacccd8de06d3"
+  },
+  {
+   "doc_id": "qasper_1610.00956",
+   "paper_id": "1610.00956",
+   "question": "How does their ensemble method work?",
+   "answer": "simply averaging the predictions from the constituent single models",
+   "evidence_pages": [
+    67
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "09c86ef78e567033b725fc56b85c5d2602c1a7c3"
+  },
+  {
+   "doc_id": "qasper_1610.07809",
+   "paper_id": "1610.07809",
+   "question": "what levels of document preprocessing are looked at?",
+   "answer": "raw text text cleaning through document logical structure detection removal of keyphrase sparse sections of the document",
+   "evidence_pages": [
+    2
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "06eb9f2320451df83e27362c22eb02f4a426a018"
+  },
+  {
+   "doc_id": "qasper_1610.08815",
+   "paper_id": "1610.08815",
+   "question": "What are the network's baseline features?",
+   "answer": "The features extracted from CNN.",
+   "evidence_pages": [
+    28
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "1beb4a590fa6127a138f4ed1dd13d5d51cc96809"
+  },
+  {
+   "doc_id": "qasper_1610.09225",
+   "paper_id": "1610.09225",
+   "question": "Do they remove seasonality from the time series?",
+   "answer": "no",
+   "evidence_pages": [
+    7
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "3611a72f754de1e256fbd25b012197e1c24e8470"
+  },
+  {
+   "doc_id": "qasper_1611.01576",
+   "paper_id": "1611.01576",
+   "question": "What languages pairs are used in machine translation?",
+   "answer": "German–English",
+   "evidence_pages": [
+    36
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "2f901dab6b757e12763b23ae8b37ae2e517a2271"
+  },
+  {
+   "doc_id": "qasper_1611.02988",
+   "paper_id": "1611.02988",
+   "question": "Which Facebook pages did they look at?",
+   "answer": "FoxNews, CNN, ESPN, New York Times, Time magazine, Huffington Post Weird News, The Guardian, Cartoon Network, Cooking Light, Home Cooking Adventure, Justin Bieber, Nickelodeon, Spongebob, Disney",
+   "evidence_pages": [
+    6
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "de53af4eddbc30c808d90b8a11a29217d377569e"
+  },
+  {
+   "doc_id": "qasper_1611.03599",
+   "paper_id": "1611.03599",
+   "question": "What topic is covered in the Chinese Facebook data?",
+   "answer": "anti-nuclear-power",
+   "evidence_pages": [
+    18
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "37a79be0148e1751ffb2daabe4c8ec6680036106"
+  },
+  {
+   "doc_id": "qasper_1611.04798",
+   "paper_id": "1611.04798",
+   "question": "Which languages do they test on for the under-resourced scenario?",
+   "answer": "English German",
+   "evidence_pages": [
+    30
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "41ac23e32bf208b69414f4b687c4f324c6132464"
+  },
+  {
+   "doc_id": "qasper_1611.08661",
+   "paper_id": "1611.08661",
+   "question": "What baselines are used for comparison?",
+   "answer": "TransE",
+   "evidence_pages": [
+    52
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "932b39fd6c47c6a880621a62e6a978491d881d60"
+  },
+  {
+   "doc_id": "qasper_1612.02482",
+   "paper_id": "1612.02482",
+   "question": "How were the human judgements assembled?",
+   "answer": "50 human annotators ranked a random sample of 100 translations by Adequacy, Fluency and overall ranking on a 5-point scale.",
+   "evidence_pages": [
+    37
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "0ee73909ac638903da4a0e5565c8571fc794ab96"
+  },
+  {
+   "doc_id": "qasper_1612.03226",
+   "paper_id": "1612.03226",
+   "question": "Which dataset do they use?",
+   "answer": "190 hours ( INLINEFORM1 100K instances)",
+   "evidence_pages": [
+    17
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "551457ed34ca7fc0878c85bc664b135c21059b58"
+  },
+  {
+   "doc_id": "qasper_1612.06685",
+   "paper_id": "1612.06685",
+   "question": "How do they obtain psychological dimensions of people?",
+   "answer": "using the Meaning Extraction Method",
+   "evidence_pages": [
+    12
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "07d15501a599bae7eb4a9ead63e9df3d55b3dc35"
+  },
+  {
+   "doc_id": "qasper_1612.08205",
+   "paper_id": "1612.08205",
+   "question": "What social media platform did they look at?",
+   "answer": "http://www.blogger.com",
+   "evidence_pages": [
+    13
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "01a41c0a4a7365cd37d28690735114f2ff5229f2"
+  },
+  {
+   "doc_id": "qasper_1701.02962",
+   "paper_id": "1701.02962",
+   "question": "What dataset do they use to evaluate their method?",
+   "answer": "antonym and synonym pairs collected from WordNet BIBREF9 and Wordnik",
+   "evidence_pages": [
+    29
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "2fbb6322e485e7743ec3fb4bb02d44bf4b5ea8a6"
+  },
+  {
+   "doc_id": "qasper_1701.04056",
+   "paper_id": "1701.04056",
+   "question": "How long of dialog history is captured?",
+   "answer": "two previous turns",
+   "evidence_pages": [
+    19
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "5260cb56b7d127772425583c5c28958c37cb9bea"
+  },
+  {
+   "doc_id": "qasper_1701.05574",
+   "paper_id": "1701.05574",
+   "question": "What other evaluation metrics are looked at?",
+   "answer": "F-score Kappa",
+   "evidence_pages": [
+    36
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "49c32a2a64eb41381e5f12ccea4150cac9f3303d"
+  },
+  {
+   "doc_id": "qasper_1701.08229",
+   "paper_id": "1701.08229",
+   "question": "Do they evaluate only on English datasets?",
+   "answer": "yes",
+   "evidence_pages": [
+    2
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "00c57e45ac6afbdfa67350a57e81b4fad0ed2885"
+  },
+  {
+   "doc_id": "qasper_1702.03342",
+   "paper_id": "1702.03342",
+   "question": "What are the two neural embedding models?",
+   "answer": "Our first model is the Concept Raw Context model (CRC) which utilizes concept mentions in a large scale KB to jointly learn embeddings of both words and concepts. Our second model is the Concept-Concept Context model (3C) which learns the embeddings of concepts from their conceptual contexts (i.e., contexts containing surrounding concepts only)",
+   "evidence_pages": [
+    8
+   ],
+   "evidence_sources": [
+    "QASPER paragraph evidence"
+   ],
+   "src_modality": "qasper_paragraph",
+   "question_id": "e8a32460fba149003566969f92ab5dd94a8754a4"
+  }
+ ],
+ "source": "QASPER v0.3 official evidence annotations",
+ "unit": "paragraph (not PDF page)",
+ "strict_evidence": true
+}

@@ -1,0 +1,14 @@
+# Second formal run, only after qasper_only_v1 is evaluated.
+run_name: qasper_mmlongbench_mixed_v1
+base_model: cross-encoder/ms-marco-MiniLM-L6-v2
+train_pairs: results/raw/mixed_train_pairs.jsonl
+output_dir: models/qasper_mmlongbench_mixed_v1
+epochs: 2
+batch_size: 32
+max_length: 512
+learning_rate: 0.00002
+balance_classes: true
+seed: 2024201433
+
+# The file contains 40,630 QASPER paragraph pairs + 660 MMLongBench page pairs.
+# Report QASPER and MMLongBench evaluations separately; never combine their Hit@k.

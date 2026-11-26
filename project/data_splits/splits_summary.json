@@ -1,0 +1,19 @@
+{
+  "eligible_pool": 232,
+  "eligible_by_modality": {
+    "table": 142,
+    "pure": 90
+  },
+  "main80": 80,
+  "main80_docs": 54,
+  "dev": 20,
+  "test": 60,
+  "dev_test_doc_isolated": true,
+  "unanswerable_total": 223,
+  "unans40": 40,
+  "unans40_docs": 28,
+  "audit_pool": 53,
+  "audit_pool_docs": 27,
+  "audit_pool_single_evidence": 38,
+  "audit_pool_pilot_overlap": 20
+}

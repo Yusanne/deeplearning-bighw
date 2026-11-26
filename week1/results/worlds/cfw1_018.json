@@ -1,0 +1,171 @@
+{
+  "qid": "cfw1_018",
+  "doc_id": "mi_phone.pdf",
+  "question": "How many steps are needed for editing an SMS?",
+  "answer": "4",
+  "answer_format": "Int",
+  "gold_pages_textview": [
+    2,
+    4,
+    6,
+    9,
+    11,
+    16,
+    21,
+    23,
+    26,
+    27,
+    35,
+    36
+  ],
+  "n_corpus_pages": 37,
+  "hit5_bm25": true,
+  "hit5_rrf": true,
+  "gold_rank_rrf": 1,
+  "del_pages": [
+    14,
+    24,
+    10
+  ],
+  "benign_pages": [
+    14,
+    24
+  ],
+  "benign_ok": true,
+  "swap_page": 2,
+  "swap": {
+    "swap_ok": true,
+    "rule": "numeric-conflict",
+    "replacement": "3",
+    "reason": "",
+    "e_minus_has_replacement": true,
+    "e_minus_free_of_gold": true,
+    "keyword_overlap": 0,
+    "short_answer_needs_review": true,
+    "valid_proxy": true
+  },
+  "worlds": {
+    "plus": [
+      {
+        "page": 21,
+        "chars": 1216,
+        "text": "Sending An SMS\nEditing An SMS\n1. Tap “Compose” button.\n2. Add a recipient \nDirectly type a contact’s phone numbers; Type any letters or phone numbers of a contact, \nselect the result from below speed search bar and press the icon “Add contacts” on the \nright to select which one you want from contacts list. If you choose contacts by mistake \nyou can delete the wrong contacts by pressing the added contacts preview.\n3.Tap “Text message” to type text.\nThere is a remind of text’s capacity above “Send” button (It will appear if there is enough \nspace). When there is more than 1 message in the mailbox it will show current messages’ \nquantity. If you attach picture, video or PPT. the message will be switched to MMS directly. \nBesides that it can support attaching emoticon, contacts’ information, mass name, every-\nday expressions.\n4. Tap “Send” button.\nReading An SMS\nWhen you receive a message there will be a remind with sender’s name, preview and re-\nceive time in the message list. You can read the completed message by typing the list. Af-\nter reading the message you can also reply it to the sender immediately.\nXiaomi Communications Co., Ltd. \n!19\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 14,
+        "chars": 750,
+        "text": "• Double-tapping: Double-tap on a webpage or image to zoom in. Double-tap again to re-\nturn.\nNotiﬁcation Panel\nWhen there are icons shown in the notiﬁcation bar, please drag down from the notiﬁcation \nbar to open the notiﬁcation panel and check the details of the information.\nText Input\nVirtual keypad is available for text input purpose.\nBelow is an example showing how to use the input keypad. Detailed interface layout and \noperations depends on the keypad which you set by default.\nOpening the keypad\n1. Type the input ﬁeld( such as typing a message) to open the keypad. There is cursor \nﬂashing in the input ﬁeld. \n2. Type the letter on the keypad.\nXiaomi Communications Co., Ltd. \n!12\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 22,
+        "chars": 2056,
+        "text": "Reading MMS\nWhen you receive MMS it will remind you to download the MMS via tapping “Download” \nbutton.\nIf MMS has a image or video attachment: Read the attachment through the “Gallery”.\nIf MMS has an audio attachment: It will be played through the system’s media player\nSending A Group SMS\nIt will show the sending progress such as “sending the message to which number  contact”\nIf it failed to send a message to someone there will be a remind to ask the user to select \nretry or give up.\nWhen all messages are sent you can check every sent message by pressing message list \nof the group.\nDeleting An SMS Dialogue or A Message\nYou can access “edit mode” by tap and hold a message in the message list or message \ndialogue for seconds. In this situation you can select the message which you want to re-\nmove.\nManage Preview and Notiﬁcations\nYou can enable preview and light up the screen in the message’s settings.\nIf you enable the preview you can view it from locked screen, notiﬁcations bar, pop-up \nwindows when you receive a new message.\nIf you enable light screen function the screen will be lighted automatically when you re-\nceive a new message so that you can read, reply, delete the message fast.\nSearch An SMS\nYou can click search bar to access search mode. You can search all messages’ text here.\nAdding A Message to “Favorite”\nTap any message in the message list for seconds to ﬁnd “More” at the bottom of the menu. \nIf you tap “Starred” it will add the message to favourites. The  message in the favourite list \nwill be remarked with a heart icon. If you tap the “Starred” icon again the message will be \nremoved from favourite list.\nAll the favourite messages will be listed in the favourite list. User can forward the message \nor cancel the starred icon of the message.\nPin An SMS Dialog to The Top\nTap and hold any dialog in your SMS list and tap the “Pin” button in the bottom. This SMS \ndialog will be pined to the top of the SMS dialog list.\nXiaomi Communications Co., Ltd. \n!20\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 6,
+        "chars": 1095,
+        "text": "Gallery\nThe new Gallery with reorganized layout enables smooth browsing of \nimages. Cloud albums will sync automatically, making it easy to create \nalbums and manage photos.\nBrowser\nIt brings you a smooth browsing and reading experience, and \nadditionally offers comprehensive security protection.\nThemes\nPersonalise your MI Phone by choosing from hundreds of unique MI \nThemes. Choose your own style, change it to ﬁt your moods simply \nand quickly with just a few screen taps.\nFile Explorer\nFile explorer lets you check storage usage and ﬁle browsing. You can \nalso use WLAN to manage your phone storage remotely.\nSecurity\nThe Security and Privacy functions allow you to set how you’d like to \nlock and unlock your phone. The MIUI supports application encryption. \nUsing MIUI virus scan and block-list features could prevent your phone \nfrom virus attacks, spam calls and junk SMS.\nUpdater\nKeep your updated to latest MIUI version.\nClock\nCustomize your alarm clock setting and tag each of the alarm.\nXiaomi Communications Co., Ltd. \n!4\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 24,
+        "chars": 1699,
+        "text": "Viewing Contacts\nContacts list\nContact list is set to simple mode by default. It can only show names of contact.\nIf you want to show more information you can enable “Display photos and info”\nTap alphabetical Index and choose a letter. If the letter is matched in the contacts’ names it \nwill show the related contacts’ names.\nContacts card\nYou can do below when you view the contacts card:ғ\nMake a call\nSend an SMS\nSet a birthday reminder of the contacts\nSend an e-mail if you already saved e-mail address of contacts\nOpen the Browser to visit website\nFind the location of contact’ address and get driving path to reach there\nAdd a note\nSet contacts by groups\nSet a ringtone\nSet contact’s photo of calling\nCheck all the calling logs with a contact\nPlace on Home screen (Menu)\nSend contact’s information (Menu)\nFavorite (Menu)\nWhen a contact have more than 1 phone numbers you can type one of them for seconds \nand press “Set default”. \nSearching Contacts\nYou can ﬁnd the contacts by searching his/her name, any letter of his/her name, nick name \nor company name.\nCreating  A New Contact\nUse dials to create new contacts:\nType numbers on the T9 dial key. If it is phone numbers of strangers you can press new \ncontact or add to contacts.\nAdd new contacts via call log:\nTap arrow icon behind strangers’ phone numbers to move to next interface, tap new con-\ntact at the bottom and select “New contact” or “Add to contacts”.\nAdd new contacts via message:\nTap “New contact” on the contacts list.\nEditing Contacts\nChoose any contact and tap “Edit”\nEdit the information of the contact and save the information.\nXiaomi Communications Co., Ltd. \n!22\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      }
+    ],
+    "del": [
+      {
+        "page": 14,
+        "chars": 750,
+        "text": "• Double-tapping: Double-tap on a webpage or image to zoom in. Double-tap again to re-\nturn.\nNotiﬁcation Panel\nWhen there are icons shown in the notiﬁcation bar, please drag down from the notiﬁcation \nbar to open the notiﬁcation panel and check the details of the information.\nText Input\nVirtual keypad is available for text input purpose.\nBelow is an example showing how to use the input keypad. Detailed interface layout and \noperations depends on the keypad which you set by default.\nOpening the keypad\n1. Type the input ﬁeld( such as typing a message) to open the keypad. There is cursor \nﬂashing in the input ﬁeld. \n2. Type the letter on the keypad.\nXiaomi Communications Co., Ltd. \n!12\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 24,
+        "chars": 1699,
+        "text": "Viewing Contacts\nContacts list\nContact list is set to simple mode by default. It can only show names of contact.\nIf you want to show more information you can enable “Display photos and info”\nTap alphabetical Index and choose a letter. If the letter is matched in the contacts’ names it \nwill show the related contacts’ names.\nContacts card\nYou can do below when you view the contacts card:ғ\nMake a call\nSend an SMS\nSet a birthday reminder of the contacts\nSend an e-mail if you already saved e-mail address of contacts\nOpen the Browser to visit website\nFind the location of contact’ address and get driving path to reach there\nAdd a note\nSet contacts by groups\nSet a ringtone\nSet contact’s photo of calling\nCheck all the calling logs with a contact\nPlace on Home screen (Menu)\nSend contact’s information (Menu)\nFavorite (Menu)\nWhen a contact have more than 1 phone numbers you can type one of them for seconds \nand press “Set default”. \nSearching Contacts\nYou can ﬁnd the contacts by searching his/her name, any letter of his/her name, nick name \nor company name.\nCreating  A New Contact\nUse dials to create new contacts:\nType numbers on the T9 dial key. If it is phone numbers of strangers you can press new \ncontact or add to contacts.\nAdd new contacts via call log:\nTap arrow icon behind strangers’ phone numbers to move to next interface, tap new con-\ntact at the bottom and select “New contact” or “Add to contacts”.\nAdd new contacts via message:\nTap “New contact” on the contacts list.\nEditing Contacts\nChoose any contact and tap “Edit”\nEdit the information of the contact and save the information.\nXiaomi Communications Co., Ltd. \n!22\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 10,
+        "chars": 622,
+        "text": "Network Tethering \nMode\nNetwork tethering mode is on and you can share your \ncellular data network with other devices.\nEarpiece\nAn earpiece has been plugged into your phone.\nSpeakerphone \nMode\nUse the speakerphone to listen a phone call.\nOTG device \nconnected\nNew device has been connected via OTG\nData \nSynchronisation\nSynchronising your data.\nSynchronisation \nFailure\nYour phone cannot synchronise data for some reason.\nMore Notiﬁcations\nThere are multiple notiﬁcations in your notiﬁcation bar.\n   Status Bar Icons\nExplnation\nXiaomi Communications Co., Ltd. \n!8\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      }
+    ],
+    "swap": [
+      {
+        "page": 21,
+        "chars": 1216,
+        "text": "Sending An SMS\nEditing An SMS\n1. Tap “Compose” button.\n2. Add a recipient \nDirectly type a contact’s phone numbers; Type any letters or phone numbers of a contact, \nselect the result from below speed search bar and press the icon “Add contacts” on the \nright to select which one you want from contacts list. If you choose contacts by mistake \nyou can delete the wrong contacts by pressing the added contacts preview.\n3.Tap “Text message” to type text.\nThere is a remind of text’s capacity above “Send” button (It will appear if there is enough \nspace). When there is more than 1 message in the mailbox it will show current messages’ \nquantity. If you attach picture, video or PPT. the message will be switched to MMS directly. \nBesides that it can support attaching emoticon, contacts’ information, mass name, every-\nday expressions.\n4. Tap “Send” button.\nReading An SMS\nWhen you receive a message there will be a remind with sender’s name, preview and re-\nceive time in the message list. You can read the completed message by typing the list. Af-\nter reading the message you can also reply it to the sender immediately.\nXiaomi Communications Co., Ltd. \n!19\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 14,
+        "chars": 750,
+        "text": "• Double-tapping: Double-tap on a webpage or image to zoom in. Double-tap again to re-\nturn.\nNotiﬁcation Panel\nWhen there are icons shown in the notiﬁcation bar, please drag down from the notiﬁcation \nbar to open the notiﬁcation panel and check the details of the information.\nText Input\nVirtual keypad is available for text input purpose.\nBelow is an example showing how to use the input keypad. Detailed interface layout and \noperations depends on the keypad which you set by default.\nOpening the keypad\n1. Type the input ﬁeld( such as typing a message) to open the keypad. There is cursor \nﬂashing in the input ﬁeld. \n2. Type the letter on the keypad.\nXiaomi Communications Co., Ltd. \n!12\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 22,
+        "chars": 2056,
+        "text": "Reading MMS\nWhen you receive MMS it will remind you to download the MMS via tapping “Download” \nbutton.\nIf MMS has a image or video attachment: Read the attachment through the “Gallery”.\nIf MMS has an audio attachment: It will be played through the system’s media player\nSending A Group SMS\nIt will show the sending progress such as “sending the message to which number  contact”\nIf it failed to send a message to someone there will be a remind to ask the user to select \nretry or give up.\nWhen all messages are sent you can check every sent message by pressing message list \nof the group.\nDeleting An SMS Dialogue or A Message\nYou can access “edit mode” by tap and hold a message in the message list or message \ndialogue for seconds. In this situation you can select the message which you want to re-\nmove.\nManage Preview and Notiﬁcations\nYou can enable preview and light up the screen in the message’s settings.\nIf you enable the preview you can view it from locked screen, notiﬁcations bar, pop-up \nwindows when you receive a new message.\nIf you enable light screen function the screen will be lighted automatically when you re-\nceive a new message so that you can read, reply, delete the message fast.\nSearch An SMS\nYou can click search bar to access search mode. You can search all messages’ text here.\nAdding A Message to “Favorite”\nTap any message in the message list for seconds to ﬁnd “More” at the bottom of the menu. \nIf you tap “Starred” it will add the message to favourites. The  message in the favourite list \nwill be remarked with a heart icon. If you tap the “Starred” icon again the message will be \nremoved from favourite list.\nAll the favourite messages will be listed in the favourite list. User can forward the message \nor cancel the starred icon of the message.\nPin An SMS Dialog to The Top\nTap and hold any dialog in your SMS list and tap the “Pin” button in the bottom. This SMS \ndialog will be pined to the top of the SMS dialog list.\nXiaomi Communications Co., Ltd. \n!20\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 6,
+        "chars": 1095,
+        "text": "Gallery\nThe new Gallery with reorganized layout enables smooth browsing of \nimages. Cloud albums will sync automatically, making it easy to create \nalbums and manage photos.\nBrowser\nIt brings you a smooth browsing and reading experience, and \nadditionally offers comprehensive security protection.\nThemes\nPersonalise your MI Phone by choosing from hundreds of unique MI \nThemes. Choose your own style, change it to ﬁt your moods simply \nand quickly with just a few screen taps.\nFile Explorer\nFile explorer lets you check storage usage and ﬁle browsing. You can \nalso use WLAN to manage your phone storage remotely.\nSecurity\nThe Security and Privacy functions allow you to set how you’d like to \nlock and unlock your phone. The MIUI supports application encryption. \nUsing MIUI virus scan and block-list features could prevent your phone \nfrom virus attacks, spam calls and junk SMS.\nUpdater\nKeep your updated to latest MIUI version.\nClock\nCustomize your alarm clock setting and tag each of the alarm.\nXiaomi Communications Co., Ltd. \n!4\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 24,
+        "chars": 1699,
+        "text": "Viewing Contacts\nContacts list\nContact list is set to simple mode by default. It can only show names of contact.\nIf you want to show more information you can enable “Display photos and info”\nTap alphabetical Index and choose a letter. If the letter is matched in the contacts’ names it \nwill show the related contacts’ names.\nContacts card\nYou can do below when you view the contacts card:ғ\nMake a call\nSend an SMS\nSet a birthday reminder of the contacts\nSend an e-mail if you already saved e-mail address of contacts\nOpen the Browser to visit website\nFind the location of contact’ address and get driving path to reach there\nAdd a note\nSet contacts by groups\nSet a ringtone\nSet contact’s photo of calling\nCheck all the calling logs with a contact\nPlace on Home screen (Menu)\nSend contact’s information (Menu)\nFavorite (Menu)\nWhen a contact have more than 1 phone numbers you can type one of them for seconds \nand press “Set default”. \nSearching Contacts\nYou can ﬁnd the contacts by searching his/her name, any letter of his/her name, nick name \nor company name.\nCreating  A New Contact\nUse dials to create new contacts:\nType numbers on the T9 dial key. If it is phone numbers of strangers you can press new \ncontact or add to contacts.\nAdd new contacts via call log:\nTap arrow icon behind strangers’ phone numbers to move to next interface, tap new con-\ntact at the bottom and select “New contact” or “Add to contacts”.\nAdd new contacts via message:\nTap “New contact” on the contacts list.\nEditing Contacts\nChoose any contact and tap “Edit”\nEdit the information of the contact and save the information.\nXiaomi Communications Co., Ltd. \n!22\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      }
+    ],
+    "benign": [
+      {
+        "page": 21,
+        "chars": 1216,
+        "text": "Sending An SMS\nEditing An SMS\n1. Tap “Compose” button.\n2. Add a recipient \nDirectly type a contact’s phone numbers; Type any letters or phone numbers of a contact, \nselect the result from below speed search bar and press the icon “Add contacts” on the \nright to select which one you want from contacts list. If you choose contacts by mistake \nyou can delete the wrong contacts by pressing the added contacts preview.\n3.Tap “Text message” to type text.\nThere is a remind of text’s capacity above “Send” button (It will appear if there is enough \nspace). When there is more than 1 message in the mailbox it will show current messages’ \nquantity. If you attach picture, video or PPT. the message will be switched to MMS directly. \nBesides that it can support attaching emoticon, contacts’ information, mass name, every-\nday expressions.\n4. Tap “Send” button.\nReading An SMS\nWhen you receive a message there will be a remind with sender’s name, preview and re-\nceive time in the message list. You can read the completed message by typing the list. Af-\nter reading the message you can also reply it to the sender immediately.\nXiaomi Communications Co., Ltd. \n!19\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 14,
+        "chars": 750,
+        "text": "• Double-tapping: Double-tap on a webpage or image to zoom in. Double-tap again to re-\nturn.\nNotiﬁcation Panel\nWhen there are icons shown in the notiﬁcation bar, please drag down from the notiﬁcation \nbar to open the notiﬁcation panel and check the details of the information.\nText Input\nVirtual keypad is available for text input purpose.\nBelow is an example showing how to use the input keypad. Detailed interface layout and \noperations depends on the keypad which you set by default.\nOpening the keypad\n1. Type the input ﬁeld( such as typing a message) to open the keypad. There is cursor \nﬂashing in the input ﬁeld. \n2. Type the letter on the keypad.\nXiaomi Communications Co., Ltd. \n!12\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 22,
+        "chars": 2056,
+        "text": "Reading MMS\nWhen you receive MMS it will remind you to download the MMS via tapping “Download” \nbutton.\nIf MMS has a image or video attachment: Read the attachment through the “Gallery”.\nIf MMS has an audio attachment: It will be played through the system’s media player\nSending A Group SMS\nIt will show the sending progress such as “sending the message to which number  contact”\nIf it failed to send a message to someone there will be a remind to ask the user to select \nretry or give up.\nWhen all messages are sent you can check every sent message by pressing message list \nof the group.\nDeleting An SMS Dialogue or A Message\nYou can access “edit mode” by tap and hold a message in the message list or message \ndialogue for seconds. In this situation you can select the message which you want to re-\nmove.\nManage Preview and Notiﬁcations\nYou can enable preview and light up the screen in the message’s settings.\nIf you enable the preview you can view it from locked screen, notiﬁcations bar, pop-up \nwindows when you receive a new message.\nIf you enable light screen function the screen will be lighted automatically when you re-\nceive a new message so that you can read, reply, delete the message fast.\nSearch An SMS\nYou can click search bar to access search mode. You can search all messages’ text here.\nAdding A Message to “Favorite”\nTap any message in the message list for seconds to ﬁnd “More” at the bottom of the menu. \nIf you tap “Starred” it will add the message to favourites. The  message in the favourite list \nwill be remarked with a heart icon. If you tap the “Starred” icon again the message will be \nremoved from favourite list.\nAll the favourite messages will be listed in the favourite list. User can forward the message \nor cancel the starred icon of the message.\nPin An SMS Dialog to The Top\nTap and hold any dialog in your SMS list and tap the “Pin” button in the bottom. This SMS \ndialog will be pined to the top of the SMS dialog list.\nXiaomi Communications Co., Ltd. \n!20\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 6,
+        "chars": 1095,
+        "text": "Gallery\nThe new Gallery with reorganized layout enables smooth browsing of \nimages. Cloud albums will sync automatically, making it easy to create \nalbums and manage photos.\nBrowser\nIt brings you a smooth browsing and reading experience, and \nadditionally offers comprehensive security protection.\nThemes\nPersonalise your MI Phone by choosing from hundreds of unique MI \nThemes. Choose your own style, change it to ﬁt your moods simply \nand quickly with just a few screen taps.\nFile Explorer\nFile explorer lets you check storage usage and ﬁle browsing. You can \nalso use WLAN to manage your phone storage remotely.\nSecurity\nThe Security and Privacy functions allow you to set how you’d like to \nlock and unlock your phone. The MIUI supports application encryption. \nUsing MIUI virus scan and block-list features could prevent your phone \nfrom virus attacks, spam calls and junk SMS.\nUpdater\nKeep your updated to latest MIUI version.\nClock\nCustomize your alarm clock setting and tag each of the alarm.\nXiaomi Communications Co., Ltd. \n!4\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      },
+      {
+        "page": 24,
+        "chars": 1699,
+        "text": "Viewing Contacts\nContacts list\nContact list is set to simple mode by default. It can only show names of contact.\nIf you want to show more information you can enable “Display photos and info”\nTap alphabetical Index and choose a letter. If the letter is matched in the contacts’ names it \nwill show the related contacts’ names.\nContacts card\nYou can do below when you view the contacts card:ғ\nMake a call\nSend an SMS\nSet a birthday reminder of the contacts\nSend an e-mail if you already saved e-mail address of contacts\nOpen the Browser to visit website\nFind the location of contact’ address and get driving path to reach there\nAdd a note\nSet contacts by groups\nSet a ringtone\nSet contact’s photo of calling\nCheck all the calling logs with a contact\nPlace on Home screen (Menu)\nSend contact’s information (Menu)\nFavorite (Menu)\nWhen a contact have more than 1 phone numbers you can type one of them for seconds \nand press “Set default”. \nSearching Contacts\nYou can ﬁnd the contacts by searching his/her name, any letter of his/her name, nick name \nor company name.\nCreating  A New Contact\nUse dials to create new contacts:\nType numbers on the T9 dial key. If it is phone numbers of strangers you can press new \ncontact or add to contacts.\nAdd new contacts via call log:\nTap arrow icon behind strangers’ phone numbers to move to next interface, tap new con-\ntact at the bottom and select “New contact” or “Add to contacts”.\nAdd new contacts via message:\nTap “New contact” on the contacts list.\nEditing Contacts\nChoose any contact and tap “Edit”\nEdit the information of the contact and save the information.\nXiaomi Communications Co., Ltd. \n!22\nDownloaded from www.Manualslib.com manuals search engine \n",
+        "modified": false
+      }
+    ]
+  },
+  "token_est_per_world": {
+    "plus": 1704,
+    "del": 767,
+    "swap": 1704,
+    "benign": 1704
+  }
+}
