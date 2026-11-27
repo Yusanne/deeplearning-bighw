@@ -1,9 +1,9 @@
 const STORAGE_KEY = "citefaith-annotation-v1";
 const WORLD_NAMES = {
-  plus: { title: "原始世界", hint: "支持答案的证据", className: "world-plus" },
-  del: { title: "删除世界", hint: "移除金标证据页", className: "world-del" },
-  swap: { title: "替换世界", hint: "相似但结论冲突", className: "world-swap" },
-  benign: { title: "良性世界", hint: "加入无关页面", className: "world-benign" },
+  plus: { title: "原始证据条件", hint: "支持答案的证据", className: "world-plus" },
+  del: { title: "证据删除条件", hint: "移除金标证据页", className: "world-del" },
+  swap: { title: "证据替换条件", hint: "相似但可能支持不同结论", className: "world-swap" },
+  benign: { title: "无关证据添加条件", hint: "加入不支持结论的相关页面", className: "world-benign" },
 };
 
 const state = {
@@ -152,7 +152,7 @@ function renderAnnotationPanel(row, annotation) {
     <div class="card-head"><div><h3>人工标注</h3><p class="annotation-subtitle">当前：标注人 ${state.annotator}。先独立完成，再与另一位成员讨论分歧。</p></div><span class="tag teal">${isComplete(annotation) ? "已完成" : "进行中"}</span></div>
 
     <div class="field">
-      <div class="field-label">1. 替换证据有效性 <span class="field-help">核心门槛</span></div>
+      <div class="field-label">1. 证据替换条件的解释 <span class="field-help">可选抽查</span></div>
       <div class="choice-row">
         ${choice("swap_validity", "flip", "Flip：结论确实改变", "E− 支持一个不同的、可判定的答案", annotation.swap_validity)}
         ${choice("swap_validity", "unanswerable", "变为不可回答", "E− 不能支持新答案，但原答案不应继续成立", annotation.swap_validity)}
@@ -166,7 +166,7 @@ function renderAnnotationPanel(row, annotation) {
     </div>
 
     <div class="field">
-      <div class="field-label">3. 反事实答案 <span class="field-help">独立作答，不看模型答案</span></div>
+      <div class="field-label">3. 替换条件下的答案 <span class="field-help">独立作答，不看模型答案</span></div>
       <input id="counterfactualAnswer" class="text-input" value="${escapeHtml(annotation.counterfactual_answer)}" placeholder="例如：Friday 4:45pm / 证据不足" />
     </div>
 
@@ -176,8 +176,8 @@ function renderAnnotationPanel(row, annotation) {
     </div>
 
     <div class="field">
-      <div class="field-label">5. 良性页是否真的不改变事实</div>
-      ${yesNo("benign_valid", annotation.benign_valid, "良性有效", "不能作为良性页", "加入页面与主题相关，但不单独支持或冲突于答案")}
+      <div class="field-label">5. 无关证据添加后是否应保持答案</div>
+      ${yesNo("benign_valid", annotation.benign_valid, "添加有效", "添加不合格", "加入页面与主题相关，但不单独支持或冲突于答案")}
     </div>
 
     <div class="field">
@@ -268,8 +268,8 @@ function render() {
   </div>
   <div class="grid">
     <div class="evidence-column">
-      <section class="card"><div class="card-head"><div><h3>原始问题与参考答案</h3><p class="small-note">先确认题目能否被明确判定，再查看四个世界。</p></div></div><div class="gold-answer">${escapeHtml(row.answer || "未记录参考答案")}</div></section>
-      <section class="card"><div class="card-head"><div><h3>四个证据世界</h3><p class="small-note">展开页面阅读全文。替换世界的“规则代理”只作提示，最终标签以人工判断为准。</p></div></div><div class="worlds">${Object.keys(WORLD_NAMES).map((world) => renderWorld(row, world)).join("")}</div></section>
+      <section class="card"><div class="card-head"><div><h3>原始问题与参考答案</h3><p class="small-note">先确认题目能否被明确判定，再查看四种证据条件。</p></div></div><div class="gold-answer">${escapeHtml(row.answer || "未记录参考答案")}</div></section>
+      <section class="card"><div class="card-head"><div><h3>四种证据条件</h3><p class="small-note">展开页面阅读全文。替换条件的“规则代理”只作程序提示，结果主要用于自动诊断；可选抽查时再人工说明。</p></div></div><div class="worlds">${Object.keys(WORLD_NAMES).map((world) => renderWorld(row, world)).join("")}</div></section>
     </div>
     ${renderAnnotationPanel(row, annotation)}
   </div>`;

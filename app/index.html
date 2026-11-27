@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CiteFaith Pilot 20 标注台</title>
+    <title>Evidence Diagnostic 证据干预查看台</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
         <p class="eyebrow">CITEFAITH · PILOT ANNOTATION</p>
-        <h1>反事实引用忠实性标注台</h1>
-        <p class="subtitle">独立判断替换证据是否真的改变了事实结论。</p>
+        <h1>证据干预查看台</h1>
+        <p class="subtitle">查看证据删除、替换和无关证据添加后，模型输出是否随证据变化。</p>
       </div>
       <div class="top-actions">
         <label class="file-button">
           <input id="worldsInput" type="file" accept=".json,application/json" multiple webkitdirectory />
-          加载 worlds 文件夹
+          加载证据条件文件夹
         </label>
         <label class="file-button secondary">
           <input id="llmInput" type="file" accept=".json,application/json" multiple webkitdirectory />
@@ -61,8 +61,8 @@
       <section id="mainPanel" class="main-column">
         <div class="empty-state large">
           <div class="empty-icon">⌁</div>
-          <h2>先加载 worlds 文件夹</h2>
-          <p>选择 <code>week1/results/worlds</code> 文件夹中的 JSON 文件即可开始标注。</p>
+          <h2>先加载证据条件文件夹</h2>
+          <p>选择 <code>week1/results/worlds</code> 文件夹中的 JSON 文件即可查看四种证据条件。</p>
         </div>
       </section>
     </main>
