@@ -1,4 +1,4 @@
-# CiteFaith frozen protocol (v2026-11-26) — mirrors 选题策划和可行性分析.md §7
+# Evidence Diagnostic frozen protocol (v2026-11-27) — mirrors 选题策划和可行性分析.md §7
 # Any change after freeze must be logged with version, reason, impact.
 
 seed: 2024201433
@@ -8,10 +8,11 @@ splits:
   eval_main_dev: 20        # doc-isolated from test
   eval_main_test: 60
   eval_unanswerable: 40    # doc-disjoint from main80 (train-pool allowed: abstention layer)
-  audit_default: 20        # CiteFaith-20 = primary analysis (2026-11-26 plan revision)
-  audit_extension: 40      # only if candidate quality + time allow; robustness analysis
-  audit_selected_actual: 29    # s4 autofilter result 2026-11-26: 20 primary + 9 extension
-  audit_shortlist_review: 5    # double-reviewed overlap; independent tasks are separate
+  audit_default: 0         # no mandatory manual audit; automatic evidence interventions are primary
+  audit_optional_spotcheck: 5 # optional qualitative cases only
+  audit_extension: 0       # no manual extension
+  audit_selected_actual: 29    # s4 autofilter result 2026-11-26; all are processed automatically
+  audit_shortlist_review: 0    # no mandatory double-reviewed overlap
   cap_per_doc: 3
 
 method:

@@ -108,16 +108,16 @@ $PY -I scripts/s9_csv_to_latex.py results/tables/main.csv results/tables/main.te
 - `results/raw|tables/` 原始输出与论文表格
 - `models/` reranker checkpoint 与训练日志（ModelArts 侧产出后回传）
 
-## CiteFaith-20 双人复核文件
+## 证据干预案例文件（可选）
 
-正式审计不是让一人标完全部题目，而是固定 20 个唯一候选：潘雨萱独立 7 题、张轩晨独立 8 题、双方共同复核 5 题。对应文件已经生成：
+主实验不要求完成 20 题人工标注，也不把人工复核作为训练或主指标的前置条件。下面文件是前期 pilot 的历史任务包；如果时间允许，可从中挑选不超过 5 个案例用于答辩展示和定性说明：
 
-- `results/raw/review_assignments.csv`：完整 20 题分工表；
-- `results/raw/review_task_pan.xlsx`：潘雨萱的复核任务（7 个独立题 + 5 个共同题）；
-- `results/raw/review_task_zhang.xlsx`：张轩晨的复核任务（8 个独立题 + 5 个共同题），证据页文本已内嵌，可直接发送；
+- `results/raw/review_assignments.csv`：历史 20 题分工表；
+- `results/raw/review_task_pan.xlsx`：前期 pilot 任务文件，可选抽查时参考；
+- `results/raw/review_task_zhang.xlsx`：前期 pilot 任务文件，可选抽查时参考；
 - `results/raw/review_task_pan.csv` / `review_task_zhang.csv`：便于程序读取的任务清单。
 
-两份 Excel 只需要填写黄色列；完成后可使用 `app/merge_simple_annotation_xlsx.py` 合并共同题并计算一致性。
+如果进行可选抽查，只填写对应案例的黄色列；不要求合并 20 题，也不计算大规模一致性。自动证据干预的主结果由程序直接生成。
 
 ## 边界
 
