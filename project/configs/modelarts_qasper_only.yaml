@@ -4,12 +4,20 @@ run_name: qasper_only_v1
 base_model: cross-encoder/ms-marco-MiniLM-L6-v2
 train_pairs: results/raw/qasper_train_pairs.jsonl
 output_dir: models/qasper_supervised_v1
+script: scripts/s16_train_formal.py
+generation_answers: results/raw/gen_answers_train.jsonl
+generation_manifest: results/raw/gen_manifest_train.jsonl
+source_filter: qasper
 epochs: 2
 batch_size: 32
 max_length: 512
 learning_rate: 0.00002
 balance_classes: true
 seed: 2024201433
+
+# The source file has 40,630 rows. After candidate de-duplication and the
+# available gold/gen/none answer-slot expansion, the current preflight count
+# is 60,918 model training examples.
 
 # After training, evaluate the same checkpoint with:
 #   data_splits/eval_main80.json  -> data/pages

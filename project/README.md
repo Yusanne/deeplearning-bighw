@@ -48,19 +48,37 @@ $PY -I scripts/s13_bootstrap_ci.py results/raw/qasper_zeroshot/zeroshot_rerank.j
 $PY -I scripts/s12_build_qasper_pairs.py data/qasper_official/raw_train_dev/qasper-train-v0.3.json \
       results/raw/qasper_train_pairs.jsonl results/raw/qasper_train_pairs_stats.json
 
-# 11 QASPER train evidence 对的正式训练（ModelArts；本机只跑 pilot）
-# 当前 s10_train_reranker_pilot.py 对应 660 对 MMLongBench pilot；正式训练需在 GPU 上跑 40,630 对。
-# 首轮正式配置见 configs/modelarts_qasper_only.yaml：
-# RERANK_MODEL=cross-encoder/ms-marco-MiniLM-L6-v2 \
-#   BATCH_SIZE=32 MAX_LENGTH=512 BALANCE_CLASSES=1 \
-#   $PY -I scripts/s10_train_reranker_pilot.py \
-#   results/raw/qasper_train_pairs.jsonl models/qasper_supervised_v1 2
+# 11 QASPER train evidence 对的正式训练（ModelArts；本机只跑 smoke test）
+# qasper_train_pairs.jsonl 保留 40,630 行官方 gold/none 对；
+# s16 会按 question-document-page-label 去重，再展开可用的 gold/gen/none 槽，
+# 当前预检得到 60,918 个实际训练样本。
+$PY -I scripts/s16_train_formal.py \
+  --pairs results/raw/qasper_train_pairs.jsonl \
+  --gen results/raw/gen_answers_train.jsonl \
+  --manifest results/raw/gen_manifest_train.jsonl \
+  --out models/qasper_supervised_v1 --source-filter qasper \
+  --epochs 2 --max-length 512 --batch-size 32 --device cuda
 
-# 12 第二轮才跑混合训练（40,630 QASPER + 660 MMLongBench）
+# 11b 训练后分别评测两个数据源（指标不能合并）
+$PY -I scripts/s17_eval_reranker.py models/qasper_supervised_v1 \
+  data_splits/eval_main80.json data/pages results/raw/qasper_model_mm_eval \
+  --answers results/raw/gen_answers_eval.jsonl --device cuda
+$PY -I scripts/s17_eval_reranker.py models/qasper_supervised_v1 \
+  data_splits/eval_qasper40.json data/qasper_pages results/raw/qasper_model_qasper_eval \
+  --answers results/raw/gen_answers_eval.jsonl --device cuda
+
+# 12 第二轮才跑混合训练（原始文件 40,630 QASPER + 660 MMLongBench；
+# s16 当前预检展开为 61,908 个实际训练样本）
 $PY -I scripts/s14_merge_pairs.py results/raw/mixed_train_pairs.jsonl \
       qasper=results/raw/qasper_train_pairs.jsonl \
       mmlongbench_doc=results/raw/train_pairs.jsonl
 # 配置：configs/modelarts_mixed.yaml；不能把两个数据源的指标合并。
+$PY -I scripts/s16_train_formal.py \
+  --pairs results/raw/mixed_train_pairs.jsonl \
+  --gen results/raw/gen_answers_train.jsonl \
+  --manifest results/raw/gen_manifest_train.jsonl \
+  --out models/qasper_mmlongbench_mixed_v1 \
+  --epochs 2 --max-length 512 --batch-size 32 --device cuda
 
 # 13 表格转换（评测 CSV 全部由此生成 LaTeX，禁止手敲数字）
 $PY -I scripts/s9_csv_to_latex.py results/tables/main.csv results/tables/main.tex --bold-max

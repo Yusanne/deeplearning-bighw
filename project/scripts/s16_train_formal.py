@@ -1,14 +1,25 @@
 #!/usr/bin/env python
-"""S16: formal reranker training on the mixed pair set (41,290 pairs), answer-slot protocol
-per §3.6.2: slots {gold, gen, none} mixed; evaluation on MM dev + QASPER dev each epoch with
-the *gen or none* slot only (never gold at eval).
+"""S16: formal reranker training with leakage-safe answer slots.
 
-Class imbalance (pos 7,574 / neg 33,716) handled with pos_weight in BCE loss.
+The input pair files may already contain repeated ``gold``/``none`` rows (the
+QASPER builder does this), so rows are first deduplicated by
+question-document-page-label.  Only then are the available answer slots
+{gold, gen, none} expanded.  This keeps the reported training size honest.
+
+Evaluation on MM dev + QASPER dev uses the *none* slot only (never gold at
+evaluation).
+
+Class imbalance is handled with a positive-class weight in BCE loss.
 
 Usage:
   python -I s16_train_formal.py --pairs results/raw/mixed_train_pairs.jsonl \
       --gen results/raw/gen_answers_train.jsonl --out models/formal_v1 \
-      --epochs 2 --max-length 384 --device cpu
+      --epochs 2 --max-length 512 --device cpu
+
+Smoke test:
+  python -I s16_train_formal.py --pairs results/raw/qasper_train_pairs.jsonl \
+      --source-filter qasper --max-questions 2 --epochs 1 \
+      --max-length 64 --batch-size 2 --skip-eval --out /tmp/s16-smoke
 """
 import argparse
 import json
@@ -42,7 +53,7 @@ class PairDataset(Dataset):
         return {k: v.squeeze(0) for k, v in enc.items()}, torch.tensor(float(r["label"]))
 
 
-def load_pairs(pairs_path, gen_path, manifest_path, source_filter=""):
+def load_pairs(pairs_path, gen_path, manifest_path, source_filter="", max_questions=0):
     def norm_ans(x):
         if isinstance(x, list):
             return " ".join(map(str, x))
@@ -58,7 +69,9 @@ def load_pairs(pairs_path, gen_path, manifest_path, source_filter=""):
             a = answers.get(m["qid"], "")
             if a:
                 gen_by_key[(m["source_dataset"], m["doc_id"], m["question"])] = a
-    by_q = defaultdict(dict)
+    # A QASPER row already carries an answer_slot.  Do not treat the same
+    # page/label under gold and none as two evidence candidates.
+    by_q = defaultdict(lambda: {"base": None, "candidates": {}})
     n_skip = 0
     for line in open(pairs_path, encoding="utf-8"):
         r = json.loads(line)
@@ -67,25 +80,34 @@ def load_pairs(pairs_path, gen_path, manifest_path, source_filter=""):
             n_skip += 1
             continue
         key = (src, r["doc_id"], r["question"])
-        by_q[key].setdefault("base", r)
-        by_q[key][(r["answer_slot"], r["page"])] = r
+        bucket = by_q[key]
+        if bucket["base"] is None:
+            bucket["base"] = r
+        page_key = (r.get("page"), int(r["label"]))
+        bucket["candidates"].setdefault(page_key, r)
     if n_skip:
         print(f"source-filter={source_filter} skipped={n_skip}", flush=True)
+    keys = list(by_q)
+    if max_questions:
+        keys = keys[:max_questions]
+        print(f"max-questions={max_questions} selected={len(keys)}", flush=True)
     rows, slots = [], defaultdict(int)
-    for key, g in by_q.items():
+    for key in keys:
+        g = by_q[key]
         base = g["base"]
         variants = {"gold": base["gold_answer"], "none": "[NO_ANSWER]"}
         ga = gen_by_key.get(key, "")
         if ga:
             variants["gen"] = ga
-        pos = [r for k, r in g.items() if k != "base" and r["label"] == 1]
-        neg = [r for k, r in g.items() if k != "base" and r["label"] == 0]
+        candidates = list(g["candidates"].values())
+        pos = [r for r in candidates if r["label"] == 1]
+        neg = [r for r in candidates if r["label"] == 0]
         for slot, atext in variants.items():
             for r in pos + neg:
                 rows.append({"query": f"Question: {base['question']}\nAnswer: {atext}",
                              "page_text": r["page_text"], "label": r["label"]})
                 slots[slot] += 1
-    return rows, slots
+    return rows, slots, len(keys)
 
 
 @torch.no_grad()
@@ -144,18 +166,24 @@ def main():
     ap.add_argument("--seed", type=int, default=2024201433)
     ap.add_argument("--source-filter", default="",
                     help="train on one source only, e.g. qasper (empty = all/mixed)")
+    ap.add_argument("--max-questions", type=int, default=0,
+                    help="smoke-test limit; 0 means all questions")
+    ap.add_argument("--skip-eval", action="store_true",
+                    help="skip dev evaluation; intended only for smoke tests")
     args = ap.parse_args()
     os.makedirs(args.out, exist_ok=True)
     torch.manual_seed(args.seed)
     random.seed(args.seed)
+    torch.set_num_threads(min(8, os.cpu_count() or 1))
 
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
     tok = AutoTokenizer.from_pretrained(MODEL)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL).to(args.device)
 
-    rows, slots = load_pairs(args.pairs, args.gen, args.manifest, args.source_filter)
+    rows, slots, n_questions = load_pairs(
+        args.pairs, args.gen, args.manifest, args.source_filter, args.max_questions)
     random.shuffle(rows)
-    print(f"pairs={len(rows)} by_slot={dict(slots)}", flush=True)
+    print(f"questions={n_questions} pairs={len(rows)} by_slot={dict(slots)}", flush=True)
 
     pos = sum(1 for r in rows if r["label"] == 1)
     neg = len(rows) - pos
@@ -187,17 +215,19 @@ def main():
             logits = model(**batch).logits.squeeze(-1)
             loss = lossf(logits, y)
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             opt.step()
             tot += loss.item()
             nb += 1
-            if bi % 200 == 0:
+            if bi % 50 == 0:
                 print(f"ep{ep} step{bi}/{len(dl)} loss={tot/nb:.4f}", flush=True)
-        devm = evaluate(model, tok, args.device, args.max_length)
+        devm = {} if args.skip_eval else evaluate(model, tok, args.device, args.max_length)
         history.append({"epoch": ep, "loss": round(tot / max(nb, 1), 6), "dev": devm})
         print(f"== epoch {ep}: loss={tot/max(nb,1):.4f} dev={devm}", flush=True)
         torch.save(model.state_dict(), os.path.join(args.out, f"epoch{ep}.pt"))
     json.dump({"base": MODEL, "args": vars(args), "slots": dict(slots), "history": history,
-               "note": "formal run; eval slot = none (runtime-safe); gen-slot eval in s17"},
+               "questions": n_questions,
+               "note": "formal run; input candidates deduplicated by page/label; eval slot = none"},
               open(os.path.join(args.out, "train_log.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
 

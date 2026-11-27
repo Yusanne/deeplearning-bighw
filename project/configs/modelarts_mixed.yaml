@@ -3,12 +3,19 @@ run_name: qasper_mmlongbench_mixed_v1
 base_model: cross-encoder/ms-marco-MiniLM-L6-v2
 train_pairs: results/raw/mixed_train_pairs.jsonl
 output_dir: models/qasper_mmlongbench_mixed_v1
+script: scripts/s16_train_formal.py
+generation_answers: results/raw/gen_answers_train.jsonl
+generation_manifest: results/raw/gen_manifest_train.jsonl
 epochs: 2
 batch_size: 32
 max_length: 512
 learning_rate: 0.00002
 balance_classes: true
 seed: 2024201433
+
+# The source file has 41,290 rows. After candidate de-duplication and the
+# available gold/gen/none answer-slot expansion, the current preflight count
+# is 61,908 model training examples.
 
 # The file contains 40,630 QASPER paragraph pairs + 660 MMLongBench page pairs.
 # Report QASPER and MMLongBench evaluations separately; never combine their Hit@k.
