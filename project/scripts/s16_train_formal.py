@@ -159,11 +159,12 @@ def main():
     ap.add_argument("--manifest", default="results/raw/gen_manifest_train.jsonl")
     ap.add_argument("--out", default="models/formal_v1")
     ap.add_argument("--epochs", type=int, default=2)
-    ap.add_argument("--max-length", type=int, default=384)
+    ap.add_argument("--max-length", type=int, default=512)
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--lr", type=float, default=2e-5)
     ap.add_argument("--device", default="cpu")
     ap.add_argument("--seed", type=int, default=2024201433)
+    ap.add_argument("--resume", action="store_true")
     ap.add_argument("--source-filter", default="",
                     help="train on one source only, e.g. qasper (empty = all/mixed)")
     ap.add_argument("--max-questions", type=int, default=0,
@@ -205,10 +206,34 @@ def main():
     print(f"tensorized: {len(ds)} items, {len(dl)} steps/epoch", flush=True)
 
     history, best = [], None
+    resume_ep, resume_bi = 0, 0
+    last_pt = os.path.join(args.out, "last.pt")
+    last_meta = os.path.join(args.out, "last_meta.json")
+    if args.resume and os.path.exists(last_pt):
+        checkpoint = torch.load(last_pt, map_location="cpu")
+        if isinstance(checkpoint, dict) and "model_state" in checkpoint:
+            model.load_state_dict(checkpoint["model_state"])
+            if "optimizer_state" in checkpoint:
+                opt.load_state_dict(checkpoint["optimizer_state"])
+                for state in opt.state.values():
+                    for name, value in state.items():
+                        if torch.is_tensor(value):
+                            state[name] = value.to(args.device)
+            resume_ep = int(checkpoint.get("ep", 0))
+            resume_bi = int(checkpoint.get("bi", 0))
+        else:
+            # Backward compatibility with the earlier model-only last.pt.
+            model.load_state_dict(checkpoint)
+        if not resume_ep and os.path.exists(last_meta):
+            m = json.load(open(last_meta, encoding="utf-8"))
+            resume_ep, resume_bi = m["ep"], m["bi"]
+        print(f"resumed from {last_pt} at ep{resume_ep} step{resume_bi}", flush=True)
     for ep in range(1, args.epochs + 1):
         model.train()
         tot, nb = 0.0, 0
         for bi, (ids, mask, y) in enumerate(dl, 1):
+            if ep < resume_ep or (ep == resume_ep and bi <= resume_bi):
+                continue  # fast-forward already-done steps
             batch = {"input_ids": ids.to(args.device), "attention_mask": mask.to(args.device)}
             y = y.to(args.device)
             opt.zero_grad()
@@ -221,6 +246,11 @@ def main():
             nb += 1
             if bi % 50 == 0:
                 print(f"ep{ep} step{bi}/{len(dl)} loss={tot/nb:.4f}", flush=True)
+            if bi % 400 == 0:
+                torch.save({"model_state": model.state_dict(),
+                            "optimizer_state": opt.state_dict(),
+                            "ep": ep, "bi": bi}, last_pt)
+                json.dump({"ep": ep, "bi": bi}, open(last_meta, "w", encoding="utf-8"))
         devm = {} if args.skip_eval else evaluate(model, tok, args.device, args.max_length)
         history.append({"epoch": ep, "loss": round(tot / max(nb, 1), 6), "dev": devm})
         print(f"== epoch {ep}: loss={tot/max(nb,1):.4f} dev={devm}", flush=True)
