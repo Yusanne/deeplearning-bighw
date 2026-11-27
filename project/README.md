@@ -3,6 +3,21 @@
 题目：有引用，不等于有依赖——面向长文档问答的冗余感知证据忠实性评估与重排序
 策划文档：`../选题策划和可行性分析.md`（含冻结协议 §7 与冲刺执行清单）
 
+## 华为云硬件兼容性提醒
+
+课程 homework7/8 提供的 ModelArts Notebook 是昇腾 NPU + MindSpore 环境；本项目的 `s16_train_formal.py` 和 `s17_eval_reranker.py` 当前基于 PyTorch Transformers，命令中的 `--device cuda` 只适用于 CUDA GPU。不要在课程 NPU 上直接运行该命令。
+
+创建实例后先核验：
+
+```bash
+python -c "import mindspore as ms; print(ms.__version__)"
+npu-smi info
+python -c "import torch; print(torch.__version__)"
+python -c "import torch_npu; print('torch_npu ok')"
+```
+
+如果只有 NPU 而没有可用的 `torch_npu`，需要先把训练脚本适配到 `torch_npu`/Ascend，或向老师申请 CUDA GPU 资源；不要自行混装不匹配的 PyTorch、CANN 和 `torch_npu` 版本。
+
 ## 运行顺序（venv python -I，脚本与数据分离）
 
 ```bash
