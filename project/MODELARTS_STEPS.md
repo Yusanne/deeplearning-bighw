@@ -64,4 +64,4 @@ checkpoint 回来后运行 `scripts/s17_eval_reranker.py`，分别评测
 - 混合模型 QASPER test：生成答案槽 Hit@1=0.500、MRR=0.599；
 - 评测 JSON 和训练日志已提交到仓库 `project/results/raw/formal_*`；checkpoint 保留在 ModelArts 工作盘，未提交 Git。
 
-后续不再盲目增加训练轮数，优先补 Dense baseline、paired bootstrap CI 和 A2/A3/A6 消融。
+后续不再盲目增加训练轮数；Dense baseline 和 paired bootstrap CI 已完成，下一步优先补 A2/A3/A6 消融与主表。

@@ -1,0 +1,60 @@
+{
+  "a": "project/results/raw/formal_qasper_qasper_eval/reranker_eval.json",
+  "b": "project/results/raw/formal_mixed_qasper_eval/reranker_eval.json",
+  "method": "finetuned_gen",
+  "n_boot": 2000,
+  "splits": {
+    "dev": {
+      "n": 20,
+      "delta_b_minus_a": {
+        "hit1": {
+          "value": -0.05,
+          "ci95": [
+            -0.15,
+            0.0
+          ]
+        },
+        "hit5": {
+          "value": -0.05,
+          "ci95": [
+            -0.15,
+            0.0
+          ]
+        },
+        "mrr": {
+          "value": -0.0368,
+          "ci95": [
+            -0.0937,
+            0.0
+          ]
+        }
+      }
+    },
+    "test": {
+      "n": 20,
+      "delta_b_minus_a": {
+        "hit1": {
+          "value": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "hit5": {
+          "value": -0.05,
+          "ci95": [
+            -0.15,
+            0.0
+          ]
+        },
+        "mrr": {
+          "value": 0.0138,
+          "ci95": [
+            -0.0057,
+            0.0388
+          ]
+        }
+      }
+    }
+  }
+}

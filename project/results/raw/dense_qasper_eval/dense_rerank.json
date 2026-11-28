@@ -1,0 +1,2085 @@
+{
+ "model": "sentence-transformers/all-MiniLM-L6-v2",
+ "eval_path": "project/data_splits/eval_qasper40.json",
+ "pages_dir": "project/data/qasper_pages",
+ "metrics": {
+  "dev": {
+   "bm25": {
+    "hit1": 0.45,
+    "hit5": 0.45,
+    "mrr": 0.492,
+    "n": 20
+   },
+   "tfidf_proxy": {
+    "hit1": 0.4,
+    "hit5": 0.45,
+    "mrr": 0.467,
+    "n": 20
+   },
+   "rrf_tfidf": {
+    "hit1": 0.45,
+    "hit5": 0.45,
+    "mrr": 0.488,
+    "n": 20
+   },
+   "dense": {
+    "hit1": 0.2,
+    "hit5": 0.5,
+    "mrr": 0.326,
+    "n": 20
+   },
+   "rrf_dense": {
+    "hit1": 0.3,
+    "hit5": 0.55,
+    "mrr": 0.398,
+    "n": 20
+   }
+  },
+  "test": {
+   "bm25": {
+    "hit1": 0.25,
+    "hit5": 0.5,
+    "mrr": 0.38,
+    "n": 20
+   },
+   "tfidf_proxy": {
+    "hit1": 0.25,
+    "hit5": 0.45,
+    "mrr": 0.372,
+    "n": 20
+   },
+   "rrf_tfidf": {
+    "hit1": 0.25,
+    "hit5": 0.5,
+    "mrr": 0.376,
+    "n": 20
+   },
+   "dense": {
+    "hit1": 0.15,
+    "hit5": 0.6,
+    "mrr": 0.35,
+    "n": 20
+   },
+   "rrf_dense": {
+    "hit1": 0.25,
+    "hit5": 0.6,
+    "mrr": 0.389,
+    "n": 20
+   }
+  }
+ },
+ "rows": [
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1503.00841|How do they define robustness of a model",
+   "gold": [
+    18,
+    39,
+    48,
+    50
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.05555555555555555
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.047619047619047616
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.05555555555555555
+    ],
+    "dense": [
+     0,
+     0,
+     0.034482758620689655
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.05263157894736842
+    ]
+   },
+   "dense_top5": [
+    61,
+    63,
+    8,
+    2,
+    54
+   ],
+   "rrf_dense_top5": [
+    61,
+    63,
+    54,
+    8,
+    2
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1601.02403|How is the data in the new corpus come s",
+   "gold": [
+    63
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.005952380952380952
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.005917159763313609
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.0058823529411764705
+    ],
+    "dense": [
+     0,
+     0,
+     0.016129032258064516
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.009433962264150943
+    ]
+   },
+   "dense_top5": [
+    64,
+    61,
+    187,
+    93,
+    144
+   ],
+   "rrf_dense_top5": [
+    61,
+    64,
+    93,
+    60,
+    72
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1603.01514|Do they improve on state-of-the-art sema",
+   "gold": [
+    35
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.14285714285714285
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.05555555555555555
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.08333333333333333
+    ],
+    "dense": [
+     0,
+     0,
+     0.02564102564102564
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.045454545454545456
+    ]
+   },
+   "dense_top5": [
+    9,
+    7,
+    6,
+    0,
+    50
+   ],
+   "rrf_dense_top5": [
+    9,
+    7,
+    6,
+    50,
+    40
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1603.01987|Is it valid to presume a bad medical wik",
+   "gold": [
+    22
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     0,
+     0.07142857142857142
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.5
+    ]
+   },
+   "dense_top5": [
+    25,
+    38,
+    4,
+    42,
+    9
+   ],
+   "rrf_dense_top5": [
+    4,
+    22,
+    3,
+    63,
+    9
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1603.08594|How does enforcing agreement between par",
+   "gold": [
+    17
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    17,
+    24,
+    25,
+    19,
+    4
+   ],
+   "rrf_dense_top5": [
+    17,
+    24,
+    25,
+    16,
+    37
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1603.09631|How was this data collected?",
+   "gold": [
+    16
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.0625
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.09090909090909091
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.07692307692307693
+    ],
+    "dense": [
+     0,
+     1,
+     0.3333333333333333
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.16666666666666666
+    ]
+   },
+   "dense_top5": [
+    7,
+    18,
+    16,
+    33,
+    15
+   ],
+   "rrf_dense_top5": [
+    7,
+    45,
+    15,
+    33,
+    30
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1604.00400|What is the common belief that this pape",
+   "gold": [
+    6
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     0,
+     0.05263157894736842
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.125
+    ]
+   },
+   "dense_top5": [
+    4,
+    59,
+    60,
+    5,
+    2
+   ],
+   "rrf_dense_top5": [
+    59,
+    58,
+    2,
+    4,
+    5
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1604.00727|What word level and character level mode",
+   "gold": [
+    40
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.1
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.06666666666666667
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.08333333333333333
+    ],
+    "dense": [
+     0,
+     0,
+     0.05263157894736842
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.07692307692307693
+    ]
+   },
+   "dense_top5": [
+    46,
+    45,
+    47,
+    43,
+    9
+   ],
+   "rrf_dense_top5": [
+    46,
+    45,
+    9,
+    43,
+    47
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1604.03114|what aspects of conversation flow do the",
+   "gold": [
+    12,
+    19
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.08333333333333333
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.1111111111111111
+    ],
+    "dense": [
+     0,
+     1,
+     0.25
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.25
+    ]
+   },
+   "dense_top5": [
+    30,
+    29,
+    24,
+    19,
+    23
+   ],
+   "rrf_dense_top5": [
+    29,
+    23,
+    30,
+    19,
+    15
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1604.05372|What evaluation metric do they use?",
+   "gold": [
+    31
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.09090909090909091
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.09090909090909091
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.09090909090909091
+    ],
+    "dense": [
+     0,
+     1,
+     0.25
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.2
+    ]
+   },
+   "dense_top5": [
+    15,
+    12,
+    32,
+    31,
+    30
+   ],
+   "rrf_dense_top5": [
+    15,
+    32,
+    28,
+    6,
+    31
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1604.08504|How do they detect spammers?",
+   "gold": [
+    15,
+    16,
+    19,
+    28
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.058823529411764705
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.058823529411764705
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.058823529411764705
+    ],
+    "dense": [
+     0,
+     0,
+     0.058823529411764705
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.058823529411764705
+    ]
+   },
+   "dense_top5": [
+    7,
+    11,
+    24,
+    3,
+    12
+   ],
+   "rrf_dense_top5": [
+    7,
+    12,
+    11,
+    30,
+    0
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1605.03481|What is the word-level baseline?",
+   "gold": [
+    20
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    20,
+    27,
+    22,
+    24,
+    25
+   ],
+   "rrf_dense_top5": [
+    20,
+    27,
+    23,
+    25,
+    22
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1605.06083|What biases are found in the dataset?",
+   "gold": [
+    21,
+    23
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.125
+    ],
+    "dense": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.2
+    ]
+   },
+   "dense_top5": [
+    5,
+    21,
+    6,
+    26,
+    10
+   ],
+   "rrf_dense_top5": [
+    26,
+    5,
+    6,
+    27,
+    23
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1605.07333|How do they obtain the new context repre",
+   "gold": [
+    2,
+    9
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    9,
+    14,
+    2,
+    19,
+    18
+   ],
+   "rrf_dense_top5": [
+    2,
+    9,
+    26,
+    6,
+    33
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1606.02891|what are the baseline systems?",
+   "gold": [
+    1
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     0,
+     0.08333333333333333
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.2
+    ]
+   },
+   "dense_top5": [
+    26,
+    3,
+    29,
+    5,
+    30
+   ],
+   "rrf_dense_top5": [
+    3,
+    29,
+    22,
+    18,
+    1
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1606.03676|which languages are explored?",
+   "gold": [
+    13
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    13,
+    9,
+    21,
+    10,
+    20
+   ],
+   "rrf_dense_top5": [
+    13,
+    4,
+    0,
+    20,
+    6
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1608.01084|Did they only experiment with one langua",
+   "gold": [
+    38
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.017857142857142856
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.017857142857142856
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.017857142857142856
+    ],
+    "dense": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.038461538461538464
+    ]
+   },
+   "dense_top5": [
+    40,
+    15,
+    6,
+    42,
+    26
+   ],
+   "rrf_dense_top5": [
+    40,
+    6,
+    15,
+    52,
+    56
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1608.01884|Do the authors conduct experiments on th",
+   "gold": [
+    17
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.05263157894736842
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.0625
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.05555555555555555
+    ],
+    "dense": [
+     0,
+     0,
+     0.03225806451612903
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.034482758620689655
+    ]
+   },
+   "dense_top5": [
+    31,
+    3,
+    35,
+    20,
+    6
+   ],
+   "rrf_dense_top5": [
+    20,
+    12,
+    14,
+    15,
+    33
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1608.06757|what standard dataset were used?",
+   "gold": [
+    21,
+    22
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     1,
+     0.3333333333333333
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    26,
+    28,
+    21,
+    19,
+    22
+   ],
+   "rrf_dense_top5": [
+    21,
+    19,
+    20,
+    8,
+    26
+   ]
+  },
+  {
+   "split": "dev",
+   "dataset": "qasper",
+   "qid": "qasper_1608.08188|What is the model architecture used?",
+   "gold": [
+    15
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     1,
+     0.25
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    29,
+    39,
+    37,
+    15,
+    23
+   ],
+   "rrf_dense_top5": [
+    15,
+    36,
+    23,
+    21,
+    0
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1609.00425|What predictive model do they build?",
+   "gold": [
+    39
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.017857142857142856
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.017857142857142856
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.017857142857142856
+    ],
+    "dense": [
+     0,
+     0,
+     0.045454545454545456
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.025
+    ]
+   },
+   "dense_top5": [
+    51,
+    37,
+    3,
+    7,
+    0
+   ],
+   "rrf_dense_top5": [
+    51,
+    3,
+    36,
+    52,
+    61
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1609.00559|How many humans participated?",
+   "gold": [
+    38,
+    39
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.02564102564102564
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.02564102564102564
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.02564102564102564
+    ],
+    "dense": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.1111111111111111
+    ]
+   },
+   "dense_top5": [
+    42,
+    38,
+    31,
+    24,
+    41
+   ],
+   "rrf_dense_top5": [
+    41,
+    6,
+    4,
+    5,
+    0
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1610.00956|How does their ensemble method work?",
+   "gold": [
+    67
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.014492753623188406
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.014492753623188406
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.014492753623188406
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.058823529411764705
+    ]
+   },
+   "dense_top5": [
+    67,
+    41,
+    69,
+    68,
+    57
+   ],
+   "rrf_dense_top5": [
+    41,
+    69,
+    68,
+    43,
+    46
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1610.07809|what levels of document preprocessing ar",
+   "gold": [
+    2
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     0,
+     0.1
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.2
+    ]
+   },
+   "dense_top5": [
+    17,
+    5,
+    22,
+    14,
+    11
+   ],
+   "rrf_dense_top5": [
+    5,
+    11,
+    14,
+    22,
+    2
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1610.08815|What are the network's baseline features",
+   "gold": [
+    28
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     1,
+     0.5
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     0,
+     1,
+     0.5
+    ],
+    "dense": [
+     0,
+     1,
+     0.25
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.3333333333333333
+    ]
+   },
+   "dense_top5": [
+    36,
+    46,
+    23,
+    28,
+    48
+   ],
+   "rrf_dense_top5": [
+    48,
+    36,
+    28,
+    46,
+    23
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1610.09225|Do they remove seasonality from the time",
+   "gold": [
+    7
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.0625
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.058823529411764705
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.05555555555555555
+    ],
+    "dense": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.16666666666666666
+    ]
+   },
+   "dense_top5": [
+    0,
+    7,
+    3,
+    6,
+    10
+   ],
+   "rrf_dense_top5": [
+    10,
+    6,
+    3,
+    5,
+    11
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1611.01576|What languages pairs are used in machine",
+   "gold": [
+    36
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    36,
+    29,
+    41,
+    37,
+    44
+   ],
+   "rrf_dense_top5": [
+    36,
+    44,
+    37,
+    0,
+    41
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1611.02988|Which Facebook pages did they look at?",
+   "gold": [
+    6
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    6,
+    18,
+    16,
+    26,
+    8
+   ],
+   "rrf_dense_top5": [
+    6,
+    18,
+    26,
+    16,
+    9
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1611.03599|What topic is covered in the Chinese Fac",
+   "gold": [
+    18
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    17,
+    18,
+    23,
+    20,
+    21
+   ],
+   "rrf_dense_top5": [
+    18,
+    17,
+    34,
+    31,
+    20
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1611.04798|Which languages do they test on for the ",
+   "gold": [
+    30
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     1,
+     0.5
+    ],
+    "tfidf_proxy": [
+     1,
+     1,
+     1.0
+    ],
+    "rrf_tfidf": [
+     0,
+     1,
+     0.5
+    ],
+    "dense": [
+     0,
+     1,
+     0.2
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.5
+    ]
+   },
+   "dense_top5": [
+    27,
+    40,
+    37,
+    31,
+    30
+   ],
+   "rrf_dense_top5": [
+    37,
+    30,
+    31,
+    3,
+    36
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1611.08661|What baselines are used for comparison?",
+   "gold": [
+    52
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.03333333333333333
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.038461538461538464
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.037037037037037035
+    ],
+    "dense": [
+     0,
+     0,
+     0.05
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.045454545454545456
+    ]
+   },
+   "dense_top5": [
+    40,
+    57,
+    48,
+    45,
+    62
+   ],
+   "rrf_dense_top5": [
+    57,
+    62,
+    48,
+    61,
+    6
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1612.02482|How were the human judgements assembled?",
+   "gold": [
+    37
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     1,
+     1,
+     1.0
+    ],
+    "tfidf_proxy": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_tfidf": [
+     1,
+     1,
+     1.0
+    ],
+    "dense": [
+     0,
+     1,
+     0.3333333333333333
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    38,
+    7,
+    37,
+    39,
+    33
+   ],
+   "rrf_dense_top5": [
+    37,
+    38,
+    33,
+    39,
+    48
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1612.03226|Which dataset do they use?",
+   "gold": [
+    17
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.14285714285714285
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.1111111111111111
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.125
+    ],
+    "dense": [
+     0,
+     1,
+     0.25
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.25
+    ]
+   },
+   "dense_top5": [
+    21,
+    4,
+    5,
+    17,
+    20
+   ],
+   "rrf_dense_top5": [
+    4,
+    21,
+    22,
+    17,
+    19
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1612.06685|How do they obtain psychological dimensi",
+   "gold": [
+    12
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.125
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.14285714285714285
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.125
+    ],
+    "dense": [
+     0,
+     1,
+     0.2
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.2
+    ]
+   },
+   "dense_top5": [
+    5,
+    10,
+    1,
+    11,
+    12
+   ],
+   "rrf_dense_top5": [
+    11,
+    14,
+    10,
+    9,
+    12
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1612.08205|What social media platform did they look",
+   "gold": [
+    13
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.037037037037037035
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.037037037037037035
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.037037037037037035
+    ],
+    "dense": [
+     0,
+     0,
+     0.14285714285714285
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.07142857142857142
+    ]
+   },
+   "dense_top5": [
+    0,
+    49,
+    8,
+    3,
+    1
+   ],
+   "rrf_dense_top5": [
+    0,
+    8,
+    49,
+    1,
+    9
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1701.02962|What dataset do they use to evaluate the",
+   "gold": [
+    29
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.09090909090909091
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.1111111111111111
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.1
+    ],
+    "dense": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.16666666666666666
+    ]
+   },
+   "dense_top5": [
+    32,
+    36,
+    26,
+    30,
+    42
+   ],
+   "rrf_dense_top5": [
+    30,
+    32,
+    42,
+    35,
+    36
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1701.04056|How long of dialog history is captured?",
+   "gold": [
+    19
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     1,
+     0.5
+    ],
+    "tfidf_proxy": [
+     0,
+     1,
+     0.5
+    ],
+    "rrf_tfidf": [
+     0,
+     1,
+     0.5
+    ],
+    "dense": [
+     0,
+     0,
+     0.09090909090909091
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.3333333333333333
+    ]
+   },
+   "dense_top5": [
+    41,
+    28,
+    21,
+    22,
+    2
+   ],
+   "rrf_dense_top5": [
+    41,
+    22,
+    19,
+    45,
+    2
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1701.05574|What other evaluation metrics are looked",
+   "gold": [
+    36
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     0,
+     0.022727272727272728
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.022727272727272728
+    ],
+    "rrf_tfidf": [
+     0,
+     0,
+     0.022727272727272728
+    ],
+    "dense": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_dense": [
+     0,
+     0,
+     0.058823529411764705
+    ]
+   },
+   "dense_top5": [
+    40,
+    39,
+    30,
+    34,
+    18
+   ],
+   "rrf_dense_top5": [
+    30,
+    19,
+    38,
+    40,
+    14
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1701.08229|Do they evaluate only on English dataset",
+   "gold": [
+    2
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     1,
+     0.2
+    ],
+    "tfidf_proxy": [
+     0,
+     1,
+     0.2
+    ],
+    "rrf_tfidf": [
+     0,
+     1,
+     0.2
+    ],
+    "dense": [
+     0,
+     1,
+     0.3333333333333333
+    ],
+    "rrf_dense": [
+     1,
+     1,
+     1.0
+    ]
+   },
+   "dense_top5": [
+    15,
+    14,
+    2,
+    13,
+    12
+   ],
+   "rrf_dense_top5": [
+    2,
+    12,
+    18,
+    15,
+    7
+   ]
+  },
+  {
+   "split": "test",
+   "dataset": "qasper",
+   "qid": "qasper_1702.03342|What are the two neural embedding models",
+   "gold": [
+    8
+   ],
+   "gold_src": "strict-field",
+   "metrics": {
+    "bm25": [
+     0,
+     1,
+     0.3333333333333333
+    ],
+    "tfidf_proxy": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_tfidf": [
+     0,
+     1,
+     0.25
+    ],
+    "dense": [
+     0,
+     0,
+     0.16666666666666666
+    ],
+    "rrf_dense": [
+     0,
+     1,
+     0.25
+    ]
+   },
+   "dense_top5": [
+    9,
+    11,
+    7,
+    20,
+    19
+   ],
+   "rrf_dense_top5": [
+    9,
+    7,
+    11,
+    8,
+    10
+   ]
+  }
+ ],
+ "note": "Dense mean-pooling baseline; rrf_dense fuses BM25 and Dense rankings."
+}

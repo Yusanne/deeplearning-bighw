@@ -100,6 +100,22 @@ $PY -I scripts/s16_train_formal.py \
 # QASPER test finetuned_gen: Hit@1=0.500, MRR=0.599
 # 两个数据源必须分开报告，不能合并 Hit@k。
 
+# 13 Dense baseline 与 CI（本机推理，不需要 GPU）
+$PY -I scripts/s18_dense_rerank.py data_splits/eval_main80.json data/pages \
+  results/raw/dense_mm_eval --device cpu
+$PY -I scripts/s18_dense_rerank.py data_splits/eval_qasper40.json data/qasper_pages \
+  results/raw/dense_qasper_eval --device cpu
+$PY -I scripts/s19_bootstrap_ci.py \
+  results/raw/formal_mixed_mm_eval/reranker_eval.json \
+  results/raw/formal_mixed_mm_eval/bootstrap_ci.json 2000 rrf
+$PY -I scripts/s19_bootstrap_ci.py \
+  results/raw/formal_mixed_qasper_eval/reranker_eval.json \
+  results/raw/formal_mixed_qasper_eval/bootstrap_ci.json 2000 rrf
+$PY -I scripts/s20_compare_eval_ci.py \
+  results/raw/formal_qasper_mm_eval/reranker_eval.json \
+  results/raw/formal_mixed_mm_eval/reranker_eval.json \
+  results/raw/formal_mixed_vs_qasper_mm_ci.json 2000 finetuned_gen
+
 # 13 表格转换（评测 CSV 全部由此生成 LaTeX，禁止手敲数字）
 $PY -I scripts/s9_csv_to_latex.py results/tables/main.csv results/tables/main.tex --bold-max
 ```
