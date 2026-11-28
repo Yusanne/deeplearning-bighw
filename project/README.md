@@ -82,8 +82,8 @@ $PY -I scripts/s17_eval_reranker.py models/qasper_supervised_v1 \
   data_splits/eval_qasper40.json data/qasper_pages results/raw/qasper_model_qasper_eval \
   --answers results/raw/gen_answers_eval.jsonl --device cuda
 
-# 12 第二轮才跑混合训练（原始文件 40,630 QASPER + 660 MMLongBench；
-# s16 当前预检展开为 61,908 个实际训练样本）
+# 12 混合训练（已于 2026-11-28 在 ModelArts 完成；原始文件 40,630 QASPER + 660 MMLongBench；
+# s16 展开为 61,908 个实际训练样本）
 $PY -I scripts/s14_merge_pairs.py results/raw/mixed_train_pairs.jsonl \
       qasper=results/raw/qasper_train_pairs.jsonl \
       mmlongbench_doc=results/raw/train_pairs.jsonl
@@ -94,6 +94,11 @@ $PY -I scripts/s16_train_formal.py \
   --manifest results/raw/gen_manifest_train.jsonl \
   --out models/qasper_mmlongbench_mixed_v1 \
   --epochs 2 --max-length 512 --batch-size 32 --device cuda
+
+# 已归档结果：results/raw/formal_mixed_mm_eval/reranker_eval.json
+# MMLongBench test finetuned_gen: Hit@1=0.583, MRR=0.655
+# QASPER test finetuned_gen: Hit@1=0.500, MRR=0.599
+# 两个数据源必须分开报告，不能合并 Hit@k。
 
 # 13 表格转换（评测 CSV 全部由此生成 LaTeX，禁止手敲数字）
 $PY -I scripts/s9_csv_to_latex.py results/tables/main.csv results/tables/main.tex --bold-max

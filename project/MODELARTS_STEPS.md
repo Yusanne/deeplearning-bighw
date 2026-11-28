@@ -55,3 +55,13 @@ checkpoint 回来后运行 `scripts/s17_eval_reranker.py`，分别评测
 - 若 GPU 上冒烟报错：先跑 `--epochs 1` + 只取前 500 行数据的小样本验证脚本，
   不要直接烧正式配额；
 - 昇腾 NPU 环境如 torch 不可用，改申请 GPU 规格（hw8 经验：昇腾需 torch_npu 适配）。
+
+## 5. 本次实际运行结果（2026-11-28）
+
+- QASPER-only：`formal_qasper_only/epoch2.pt`，训练 loss 0.824→0.546；
+- 混合训练：`formal_mixed/epoch2.pt`，训练 loss 0.807→0.538；
+- 混合模型 MMLongBench test：生成答案槽 Hit@1=0.583、MRR=0.655；
+- 混合模型 QASPER test：生成答案槽 Hit@1=0.500、MRR=0.599；
+- 评测 JSON 和训练日志已提交到仓库 `project/results/raw/formal_*`；checkpoint 保留在 ModelArts 工作盘，未提交 Git。
+
+后续不再盲目增加训练轮数，优先补 Dense baseline、paired bootstrap CI 和 A2/A3/A6 消融。
