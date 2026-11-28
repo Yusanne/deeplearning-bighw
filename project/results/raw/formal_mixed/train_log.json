@@ -1,0 +1,38 @@
+{
+  "base": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "args": {
+    "pairs": "project/results/raw/mixed_train_pairs.jsonl",
+    "gen": "project/results/raw/gen_answers_train.jsonl",
+    "manifest": "project/results/raw/gen_manifest_train.jsonl",
+    "out": "/home/ma-user/work/deeplearning-bighw/formal_mixed",
+    "epochs": 2,
+    "max_length": 512,
+    "batch_size": 32,
+    "lr": 2e-05,
+    "device": "cuda",
+    "seed": 2024201433,
+    "resume": false,
+    "source_filter": "",
+    "max_questions": 0,
+    "skip_eval": true
+  },
+  "slots": {
+    "gold": 20636,
+    "none": 20636,
+    "gen": 20636
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.807281,
+      "dev": {}
+    },
+    {
+      "epoch": 2,
+      "loss": 0.538418,
+      "dev": {}
+    }
+  ],
+  "questions": 2111,
+  "note": "formal run; input candidates deduplicated by page/label; eval slot = none"
+}
