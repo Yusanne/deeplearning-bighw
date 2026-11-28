@@ -1,0 +1,38 @@
+{
+  "base": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "args": {
+    "pairs": "project/results/raw/qasper_train_pairs.jsonl",
+    "gen": "project/results/raw/gen_answers_train.jsonl",
+    "manifest": "project/results/raw/gen_manifest_train.jsonl",
+    "out": "/home/ma-user/work/deeplearning-bighw/formal_qasper_only",
+    "epochs": 2,
+    "max_length": 512,
+    "batch_size": 32,
+    "lr": 2e-05,
+    "device": "cuda",
+    "seed": 2024201433,
+    "resume": false,
+    "source_filter": "qasper",
+    "max_questions": 0,
+    "skip_eval": true
+  },
+  "slots": {
+    "gold": 20306,
+    "none": 20306,
+    "gen": 20306
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.82428,
+      "dev": {}
+    },
+    {
+      "epoch": 2,
+      "loss": 0.54555,
+      "dev": {}
+    }
+  ],
+  "questions": 2096,
+  "note": "formal run; input candidates deduplicated by page/label; eval slot = none"
+}
